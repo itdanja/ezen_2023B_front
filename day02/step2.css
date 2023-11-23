@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* CSS 주석 */
+
+/* 1. 모든 곳에 스타일 적용 */
+*{ color:rgb(0, 0, 0); }
+
+/* 2. h4 태그에 스타일 적용 */
+h4{ color: yellow; }
+
+/* 3. class명이 'text1' 인 태그에 스타일 적용 */
+.text1{ color: green; }
+
+/* 4. id명이 'text2' 인 태그에 스타일 적용 */
+#text2{ color: red; }
+
+
+.title{
+	font-size: 30px;	/* 폰트크기*/
+	font-style: italic; /* 기울기 */
+	font-weight: bold;	/* 굵기 */
+}
+.content{
+	font-family: "굴림";
+	color:black;
+	word-spacing: 5px;		/* 어간 : 단어들간의 간격 */
+	letter-spacing: 2px; 	/* 자간 : 글자들간의 간격 */
+	line-height: 150%;		/* 줄간격 */
+}
+.writer{
+	text-align: center;		/* 텍스트 정렬 left center right */
+	text-decoration: line-through underline overline; /* 취소선 , 밑줄 , 윗줄 */
+	text-shadow: 1px 1px 5px #FFEB33; /*그림자*/
+				/* x축 y축 흐림정도 색상 */
+				
+	/* 색상 표현하는 방법 */
+	/* 1. 색상이름 */
+	color: red;
+	
+	/* 2. 헥사[16진수] */
+	color: #FFEB33;
+	
+	/* 3. RGB vs rgba */
+	color: rgba( 251 , 247 , 17 );
+}
+
+
+
+
+*{ padding: 0px; margin: 0px; } /* 기본 여백 제거 */
+
+.box1{
+	border : solid 1px red; /*테두리*/
+		/* 선모양 , 선굵기 , 선색상 */
+}
+.box2{
+	border-top: solid 1px skyblue; 		/* 상단 테두리 */
+	border-right: dotted 2px orange; 	/* 오른쪽 테두리 */
+	border-bottom: double 3px red; 		/* 하단 테두리 */
+	border-left: dashed 4px black;		/* 왼쪽 테두리 */
+}
+.box3{
+	border: solid 2px red;
+	border-radius: 5px; 				/* 둥근모서리 */
+	box-shadow: 5px 3px 0px orange;		/* 그림자 */
+	
+	padding: 10px;						/* 안쪽여백 */
+	margin: 20px;						/* 바깥여백 */
+}
+.box4{
+	border: solid 1px blue;
+	padding-top: 20px;					/* 안쪽 상단 여백 */
+	padding-right: 30px;				/* 안쪽 오른쪽 여백 */
+	padding-bottom: 40px;				/* 안쪽 하단 여백 */
+	padding-left: 50px;					/* 안쪽 왼쪽 여백 */
+	
+	margin-top: 50px;					/* 바깥 상단 여백 */
+	margin-right: 60px;					/* 바깥 오른쪽 여백 */
+	margin-bottom: 70px;				/* 바깥 하단 여백 */
+	margin-left: 80px;					/* 바깥 상단 여백 */
+}
+.box5{
+	border: solid 1px red;
+	width: 200px; /* 박스 가로사이즈 : 생략시 100% 기본값적용[ 디바이스 크기 ] */
+	padding: 10px 20px 30px 40px;		/* 상단 , 오른쪽 , 하단 , 왼쪽 */
+	padding: 10px 20px;					/* 상단/하단 , 오른쪽/왼쪽 */
+	
+	margin: 10px 20px 30px 40px;
+	margin: 10px 20px;
+	
+	text-align: center;					/* 박스 안에 있는 내용물 가운데 정렬 */
+	margin: 0 auto;						/* 박스 가운데 정렬 */
+}
+.box6{
+	border: solid 1px red;
+	margin: 20px;
+}
+
+
+
+
+
+
+div{
+	border: solid 1px red;
+	margin: 20px;
+	background-color: rgb(247, 203, 203);
+}
+span{
+	border: solid 1px orange;
+}
+.s1{display: inline; width: 200px; height: 200px;}
+.s2{display: block; width: 200px; height: 200px;}
+.s3{display: inline-block; width: 200px; height: 200px;}
+.s4{display: none; }
+
+.d1{display: inline; width: 200px; height: 200px; }
+.d2{display: block; width: 200px; height: 200px; }
+.d3{display: inline-block; width: 200px; height: 200px; }
+.d4{display: none; width: 200px; height: 200px; }
