@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <!--
+            마크업 이란  : 컴퓨터가 기능을 이해할수 있도록 정해놓은 HTML언어의 문법 
+            구성 : <마크업> ~~  </마크업>
+            속성 : 마크업의 부가기능    <마크업 속성명="값"> </마크업>
+    -->
+
+    <!-- p.25 -->
+    제목 마크업/태그 하기 h1~h6 : 글꼴크기,굵기 등 기능 제공 
+    <h1> 제목1 </h1>
+    <h2> 제목2 </h2>
+    <h3> 제목3 </h3>
+    <h4> 제목4 </h4>
+    <h5> 제목5 </h5>
+    <h6> 제목6 </h6>
+    <h7> 제목7 </h7> <!-- 없는 태그 .... -->
+
+    <!-- p.27 -->
+    단락 마크업과 줄바꿈 넣기  p : 문단구분 , br : 줄바꿈 
+    <p>문단내용1</p>
+    <p>문단내용2</p>
+
+    내용1 <br/>
+    내용2
+
+    <!-- p.28 -->
+    목록 마크업하기  ul : 순서번호없는 목록  ol : 순서번호있는 목록   
+    <ul> <!--unoder list : 순서(번호) 없는 목록-->
+        <li>목록1</li> <!-- list item : 목록에 항목 추가 -->
+        <li>목록2</li>
+        <li>목록3</li>
+    </ul>
+    
+    <ol> <!-- oder list : 순서(번호) 있는 목록 -->
+        <li>목록1</li><li>목록2</li><li>목록3</li>
+    </ol>
+
+    <dl> <!-- description list  -->
+        <dt>항목제목</dt>
+        <dd>항목내용1</dd>
+    </dl>
+   
+    <!-- p.30 -->
+    클릭 가능한 영역 마크업하기 a : 하이퍼링크 [ 필수 속성 : href="이동할주소" , ]
+    <br/> <a href="step2.html"> step2 페이지로 이동 </a>
+    <br/> <a href="https://www.naver.com">네이버로 이동[크롬 에서 테스트]</a>
+    <br/> <a href="tel:010-3913-2072"> 강사에게 전화걸기[핸드폰 웹에서 테스트]</a>
+    <br/> <a href="step1.html" target="_blank"> step1 페이지를 새 창/탭으로 열기[크롬 에서 테스트] </a>
+    <br/>
+    
+    <!-- p.32 -->
+    이미지 표시하기 img : 이미지출력 [ 필수 속성 : src="이미지파일경로"]
+    <br/><img src="capyzou.png" />  <!-- 동일폴더내 이미지경로 -->
+    <img src="../capyzou.png"/>     <!-- 상위폴더의 이미지경로 -->
+    <img src="img/capyzou.png" />   <!-- 하위폴더내 이미지경로-->
+    <br/>
+
+    <!-- p.35 -->
+    강조하고 싶은 문장 마크업하기 
+    <br/> <em> 강조구문 </em>
+    <strong> 경고구문 </strong>
+    <mark> 인용문 </mark>
+    <i> 부가적인 구절 </i>
+    <b> 주목구분 </b>
+    <br/>
+
+    <!-- p.36 -->
+    표 만들기  table [ 테두리 속성 : border="굵기" , 열병합 : colspan="셀개수" , 행병합 : rowspan="셀개수"  ] 
+    <table border="1">     <!--테이블 시작 -->
+        <thead> <!-- 헤더 전체 구역 -->
+            <tr> <!-- 행 / 가로줄  --> 
+                <th> 제목1 </th> <!-- 제목1 -->
+                <th> 제목2 </th> <!-- 제목2 -->
+            </tr>
+        </thead>
+        <tbody> <!-- 내용 전체 구역 -->
+            <tr> <!-- 행 / 가로줄 -->
+                <td> 내용내용내용1 </td> <!-- 내용1 -->
+                <td> 내용내용내용2 </td> <!-- 내용2 -->
+            </tr>
+            <tr> <!-- 행 추가 -->
+                <td colspan="2"> 내용1 </td>
+            </tr>
+            <tr> <!-- 행 추가 -->
+                <td rowspan="2"> 내용3 </td>
+                <td> 내용3 </td>
+            </tr>
+            <tr> <!-- 행 추가 -->
+                <td> 내용4 </td>
+            </tr>
+        </tbody>
+    </table>    <!--테이블 끝 -->
+
+    <!-- p.37 -->
+    주소 마크업하기 
+    <address> 경기도 안산시 상록구 </address>
+
+</body>
+</html>
+
+
+
+
+
