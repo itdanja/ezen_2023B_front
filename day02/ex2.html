@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <h1>과제2</h1>
+    <form>      <!-- 폼( 입력 양식) -->
+        <fieldset> <!-- 필드 구역 -->
+            <legend> <h3>비회원 게시판 </h3> </legend> <!-- 필드 구역 제목 -->
+            카테고리 <select>
+                        <option> 공지사항 </option>
+                        <option> 자유게시 </option>
+                    </select> <br/>
+            <input type="text" placeholder="작성자" />
+            <input type="password" placeholder="비밀번호" />
+            <hr /> <!-- 가로선 태그 -->
+            <input type="text" placeholder="게시물 제목 입력"/>
+            <hr />
+            <textarea rows="20" cols="50" placeholder="게시물 내용입력"></textarea> <br />
+            공개선택 <input type="radio" name="openConfirm" checked />공개글 
+                    <input type="radio" name="openConfirm" />비공개글 <br />
+            공유선택 <input type="checkbox" name="shareConfirm" /> 카카오톡 
+                    <input type="checkbox" name="shareConfirm"/> 트위터 
+                    <input type="checkbox" name="shareConfirm"/> 네이버카페 <br />        
+            작성일자 <input type="date" /> 작성시간 <input type="time" />
+            <hr />
+            첨부파일 <input type="file"/>   <br /> <br />
+            <input type="button" value="목록보기" /> 
+            <input type="submit" value="글쓰기" />
+            <input type="reset" value="다시쓰기" />
+        </fieldset> <!-- 필드 구역 -->
+    </form>  <!-- 폼( 입력 양식) -->
+
+</body>
+</html>
