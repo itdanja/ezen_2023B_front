@@ -37,6 +37,16 @@
         C:\Users\504-t\Desktop\ezen_2023B_front\day01\capyzou.png
         서버주소\day01\capyzou.png
 
+6. <audio src="오디오.mp3"></audio>
+6. <video src="동영상.mp4"></video>
+    1. <video src="동영상.mp4" > </video>               : 컨트롤러 표시 안됨. [ 실행버튼 안보임 ]
+    2. <video src="동영상.mp4" controls > </video>      : 컨트롤러 표시 . [ controls속성 ]
+    3. <video src="동영상.mp4" controls autoplay>       : 자동실행[ 브라우저 정책상 금지 ] -> JS 이용해서 강제실행 
+    4. <video src="동영상.mp4" controls autoplay muted> : 소리없이 자동실행 
+
+6. <iframe > </iframe>
+    - 외부에서 멀티미디어(동영상,이미지,지도 등등) 를 퍼가기 할때 제공해주는 태그
+
 7. <em> , <strong> , <mark> , <i> , <b>
     - 강조 마크업들 
 8. 
@@ -56,6 +66,37 @@
 
 9. <address>
     - 주소 마크업 
+
+10. <input />
+    - <form> 태그 안에서 사용 
+    - 주요 속성 
+        1. type 
+            type="text"     : [기본값] 텍스트 *
+            type="password" : 패스워드 *
+            type="email"    : 이메일 형식 [@필수입력]
+            type="color"    : 색상 
+            type="date"     : 날짜
+            type="datetime-local" : 날짜/시간 
+            type="month"    : 날짜[월]
+            type="time"     : 시간
+            type="week"     : 주 
+            type="range"    : 범위[스크롤]
+            type="number"   : 숫자
+            type="file"     : 첨부파일*
+
+            type="radio"    : [단일선택 - name속성 동일 ]*
+            type="checkbox" : [복수선택 - name속성 동일 ]*
+
+            type="button"   : 버튼 [ *추후에 JS와 같이 사용할 예정 ]
+            type="submit"   : form[폼] 전송 [ *추후에 JAVA서버에게 전송할 예정  ]
+            type="reset"    : form[폼] 입력 초기화
+        
+        2. name 
+            - 태그의 이름을 넣어서 식별하는 역할 [ 사람 이름 ]
+                <남자 이름="유재석" />
+
+
+
 
 
 

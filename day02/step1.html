@@ -36,8 +36,50 @@
         <!-- 3. 영상 파일 출력 -->
         <video src="동영상.mp4" controls autoplay muted> </video>
 
-        <!-- 4. 멀티미디어 출력 -->
-        <iframe></iframe>
+        <!-- 4. 외부 멀티미디어[퍼가기] 출력 -->
+            <!-- 유튜브 퍼가기 -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lrmDoJkZjns?si=7pSX_PsbkkNGd8SK&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!-- 구글지도 퍼가기 -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.6950868457686!2d126.85248203895028!3d37.30958449302659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6f26eca4e801%3A0xcc760a7a473e93bf!2z7ZWc64yA7JWe7Jet!5e0!3m2!1sko!2skr!4v1700790269505!5m2!1sko!2skr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+        <br/><br/><br/><br/>
+        <!--  ============================ 입력 관련 태그 ===========================  -->
+        <!-- 1. 입력상자-->
+        <form>                              <!-- 양식(폼) START -->
+            <input />
+            <input type="text" />           <!-- 텍스트 입력창 -->
+            <input type="password" />       <!-- 패스워드 입력창 -->
+            <input type="email" />          <!-- 이메일 입력창 [ submit 제출시 유효성검사 @ ] -->
+            <input type="color" />          <!-- 색상 입력창 -->
+            <input type="date" />           <!-- 날짜 입력창 -->
+            <input type="datetime-local" /> <!-- 날짜/시간 입력창 -->
+            <input type="month" />          <!-- 날짜(월) 입력창 -->
+            <input type="time" />           <!-- 시간 -->
+            <input type="week" />           <!-- 주 -->
+            <input type="range" />          <!-- 범위 스크롤 -->
+            <input type="number" />         <!-- 숫자 증가/감소 입력창 -->
+            <input type="file" />           <!-- 첨부파일 입력 -->
+
+            <br/>
+            <input type="radio" name="동의여부" /> 예           <!-- 원형체크버튼[단일선택 = 여러개 radio 타입의 name 일치화] -->
+            <input type="radio" name="동의여부"/> 아니요
+            
+            <br/>
+            <input type="checkbox" name="가입경로" /> 뉴스      <!-- 네모체크버튼[복수선택 = 여러개 checkbox타입의 name 일치화]-->
+            <input type="checkbox" name="가입경로" /> 지인추천
+            <input type="checkbox" name="가입경로" /> 검색 
+
+            <br/>
+            <input type="button" />     <!-- 일반 버튼 입력/클릭 -->
+            <input type="submit" />     <!-- 전송/제출 버튼 입력/클릭 -->
+            <input type="reset" />      <!-- 초기화 버튼 입력/클릭 -->
+        </form>                         <!-- 양식(폼) END -->
+
+
+
+
 
 
     </body>     <!-- HTML 내용물 END  -->
