@@ -1,0 +1,109 @@
+/*
+    어디의 { 무엇을 : 어떻게; }
+    - 하의 의 바지를 청바지 
+
+    1. 어디의 ????
+        - CSS 선택자 
+        1. *                       : 공통(와일드카드) : 모든 곳에 적용 
+            *{ color : red; }
+            문서[HTML] 모든곳에 색상을 레드 로 
+
+        2. 마크업이름               : 해당 마크업만 적용 
+            p { color : red; }
+            p 태그에 색상을 레드 로 
+
+        3. class속성                : [복수형] 해당 class명을 가지는 곳에 적용 
+            .class명{ color : red; }
+            class명을 가진곳에 색상을 레드 로 
+
+        4. id속성                   : [단일형] 해당 id명을 가지는 곳에 적용 
+            #id명{ color : red; }
+            id명을 가진곳에 색상을 레드 로 
+
+        - 식별에 중복 속성이 있을때 우선순위 
+            * < 마크업 < class < id 
+    
+    2.  무엇을 
+        - 속성명 
+
+    3.  어떻게 
+        - 속성 값 
+
+*/
+
+
+/* 1. * 모든곳에 적용  */
+*{ color: red; } /* 모든곳에 폰트색을 레드 */
+    
+/* 2. 마크업 적용 */
+h4{ color : yellow; } /* h4마크업에 폰트색을 엘로우 */
+
+/* 3. class명 적용 */
+.text1{ color : blue; } 
+/* class속성에 'text1' 이라는 이름을 갖는 마크업에 폰트색을 블루 */
+
+/* 4. id명 적용 */
+#text2{ color : green; }
+/* id속성에 'text2' 이라는 이름을 갖는 마크업에 폰트색을 그린 */
+
+body{ background-color: beige ;}
+
+.title{ 
+    font-family: 궁서;  /* 글꼴 지정하기*/
+    font-size: 30px;    /* 글꼴 크기 */
+    font-style: italic; /* 기울기 */
+    font-weight: bold;  /* 글꼴 진하게 */
+}
+/* class속성에 'title' 이라는 이름을 갖는 마크업 */
+
+/* ====================== 눈누 홈페이지에서 웹폰트코드 복사 ============ */ 
+@font-face { /* https://noonnu.cc/ -> 웹 폰트 */
+    font-family: 'YClover-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* ===================================================================== */
+.content{
+    font-family: 'YClover-Bold';    /* 웹폰트 지정하기 */
+    color :brown;                 /* 폰트 색상 */
+    word-spacing: 5px;              /* 어간 : 단어 간격 */
+    letter-spacing: 2px;            /* 자간 : 글자 간격 */
+    line-height: 160% ;             /* 줄간격 */
+}
+#writer{
+    text-align: /*left*/ /*right*/ center ;    /* 텍스트 가로 정렬 : left , right , center  */
+    text-decoration: line-through underline overline; 
+    /* 텍스트 선긋기 :  line-through 취소선 underline 밑줄 overline 윗줄  */
+    
+    text-shadow: 5px -5px 10px red ; 
+    /* 텍스트 그림자 : x축위치 y축위치 흐름정도 색상   */
+
+    /*  색상을 표현하는 방법 */
+    color : red;                /* 1.색상이름 */
+    color : #9b1010;            /* 2.헥사코드[16진수] */
+    color : rgb(251, 247, 17);  /* 3.RGB색상[ 0~255사이 3칸 ] */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
