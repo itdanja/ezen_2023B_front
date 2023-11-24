@@ -1,0 +1,45 @@
+<!-- 주석 : 코드설명 작성할때 -->
+<!--
+    VScode 에디터 자동완성 : ctrl+스페이바
+        - 코드 추천 
+-->
+
+<!DOCTYPE html> <!-- HTML5 버전 선언 -->
+
+<html>          <!-- HTML 시작 -->
+
+    <head>      <!-- HTML 옵션 정보 -->
+        <meta charset='utf-8'> <!-- 한글 지원 -->
+        <title> 페이지 제목 </title>    <!-- 페이지 제목 -->
+    </head>     <!-- HTML 옵션 정보 END -->
+
+    <body>      <!-- HTML 내용물 -->
+        
+        <!--
+            상대경로 : 현재 파일 기준으로부터 불러올 파일의 위치
+                ../ : 상위 폴더로 이동 
+                    ../폴더명/파일명  : 상위폴더 이동후 해당폴더안에 있는 파일위치
+                ./ 또는 생략 : 현재 위치 
+            절대경로 
+                C:\Users\504-t\Desktop\ezen_2023B_front\capyzou.png
+
+            -- 에디터가 지원 
+        -->
+    
+        <!-- 1. 이미지 파일 출력 -->
+        <img src="../capyzou.png" />        <!--상위폴더내 파일 -->
+        <img src="../day01/capyzou.png" />  <!--상위폴더내 폴더안에 파일 -->
+        
+        <!-- 2. 음성 파일 출력 -->
+        <audio src="오디오.mp3" controls autoplay></audio>
+
+        <!-- 3. 영상 파일 출력 -->
+        <video src="동영상.mp4" controls autoplay muted> </video>
+
+        <!-- 4. 멀티미디어 출력 -->
+        <iframe></iframe>
+
+
+    </body>     <!-- HTML 내용물 END  -->
+
+</html>         <!-- HTML END  -->
