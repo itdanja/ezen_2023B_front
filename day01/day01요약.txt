@@ -95,12 +95,44 @@
             - 태그의 이름을 넣어서 식별하는 역할 [ 사람 이름 ]
                 <남자 이름="유재석" />
 
+        3. value 
+            - 초기값 넣어주기 
+            - 버튼 이름
+            - 날짜/시간 초기값 
 
+        4. placeholder
+            - 가이드 라인 
 
+        5. readonly
+            - 수정불가[읽기모드]
 
+        6. disabled
+            - 사용불가
 
+        7. autofocus
+            - 포커스[커서 이동]
 
+        8. minlength , maxlength
+            - 값은 최소 길이 , 최대길이 
 
+        9. multiple
+            - [type='file'] 일때 여러개 첨부
+            
+        10. checked
+            - [type='radio'] 일때 체크상태
+            - [type='checkbox'] 일때 체크상태
+        
+10. <textarea >
+    - 긴글 텍스트 
+    - 속성 
+        rows = "가로길이"
+        cols = "세로길이"
+
+10. <select >
+    - 목록 상자 
+    - 하위태그
+        <option> 항목 </option>
+        
 
 
 

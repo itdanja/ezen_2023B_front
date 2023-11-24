@@ -48,33 +48,44 @@
         <!--  ============================ 입력 관련 태그 ===========================  -->
         <!-- 1. 입력상자-->
         <form>                              <!-- 양식(폼) START -->
-            <input />
-            <input type="text" />           <!-- 텍스트 입력창 -->
-            <input type="password" />       <!-- 패스워드 입력창 -->
-            <input type="email" />          <!-- 이메일 입력창 [ submit 제출시 유효성검사 @ ] -->
+            <input value="유재석" readonly />
+            <input type="text" placeholder="부서번호" disabled /> <!-- 텍스트 입력창 -->
+            <input type="password" autofocus />       <!-- 패스워드 입력창 -->
+            <input type="email" minlength="3" maxlength="5"  />          <!-- 이메일 입력창 [ submit 제출시 유효성검사 @ ] -->
             <input type="color" />          <!-- 색상 입력창 -->
-            <input type="date" />           <!-- 날짜 입력창 -->
-            <input type="datetime-local" /> <!-- 날짜/시간 입력창 -->
-            <input type="month" />          <!-- 날짜(월) 입력창 -->
-            <input type="time" />           <!-- 시간 -->
-            <input type="week" />           <!-- 주 -->
-            <input type="range" />          <!-- 범위 스크롤 -->
-            <input type="number" />         <!-- 숫자 증가/감소 입력창 -->
-            <input type="file" />           <!-- 첨부파일 입력 -->
+            <input type="date" value="2023-11-24" />           <!-- 날짜 입력창 -->
+            <input type="datetime-local" />         <!-- 날짜/시간 입력창 -->
+            <input type="month" />                  <!-- 날짜(월) 입력창 -->
+            <input type="time" />                   <!-- 시간 -->
+            <input type="week" />                   <!-- 주 -->
+            <input type="range" />                  <!-- 범위 스크롤 -->
+            <input type="number" />                 <!-- 숫자 증가/감소 입력창 -->
+            <input type="file" multiple />          <!-- 첨부파일 입력 -->
 
             <br/>
-            <input type="radio" name="동의여부" /> 예           <!-- 원형체크버튼[단일선택 = 여러개 radio 타입의 name 일치화] -->
-            <input type="radio" name="동의여부"/> 아니요
+            <input type="radio" name="동의여부" checked /> 예           <!-- 원형체크버튼[단일선택 = 여러개 radio 타입의 name 일치화] -->
+            <input type="radio" name="동의여부"  /> 아니요
             
             <br/>
             <input type="checkbox" name="가입경로" /> 뉴스      <!-- 네모체크버튼[복수선택 = 여러개 checkbox타입의 name 일치화]-->
-            <input type="checkbox" name="가입경로" /> 지인추천
+            <input type="checkbox" name="가입경로" checked /> 지인추천
             <input type="checkbox" name="가입경로" /> 검색 
 
             <br/>
-            <input type="button" />     <!-- 일반 버튼 입력/클릭 -->
-            <input type="submit" />     <!-- 전송/제출 버튼 입력/클릭 -->
+            <input type="button" value="일반버튼" />     <!-- 일반 버튼 입력/클릭 -->
+            <input type="submit" value="회원가입" />     <!-- 전송/제출 버튼 입력/클릭 -->
             <input type="reset" />      <!-- 초기화 버튼 입력/클릭 -->
+            
+            <br/>
+            <textarea rows="5" cols="10"></textarea> <!-- 긴글 텍스트 -->
+            
+            <br/>
+            <select> <!-- 목록 상자 -->
+                <option>네이버</option>
+                <option>카카오</option>
+                <option>네이트</option>
+            </select>
+
         </form>                         <!-- 양식(폼) END -->
 
 
