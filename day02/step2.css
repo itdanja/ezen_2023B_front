@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CSS 주석 */
+
+/*
+    1. 어디의 : body 
+    2. 무엇을 : background-color
+    3. 어떻게 : red
+    - body 마크업에 배경색을 레드 로 꾸미기
+*/
+
+body{ background-color: red; }
