@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.flexbox1 , .flexbox2 , .flexbox3 , .flexbox4 , .flexbox5{
+	display: flex;
+	width: 200px; /* 가로 사이즈 */
+	border: 1px solid red;
+}
+
+/* 자식요소들의 크기가 더 커지면 자동 줄바꿈*/
+.flexbox1{ flex-wrap: wrap; align-items: flex-start; } /* 윗변 정렬 */
+.flexbox2{ align-items: center; }						/* 가운데 정렬 */
+.flexbox3{ align-items: flex-end; }						/* 밑변 정렬 */
+.flexbox4{ align-items: stretch; } /*기본값*/				/* 높이 생략시 최소높이 자동할당*/
+.flexbox5{ flex-wrap: wrap; align-items: baseline; }	/* 모든 요소들중 밑변 기준으로 정렬*/
+
+/* 선택자1 , 선택자2{ } */
+.box1 , .box2 , .box3 , .box4 , .box5 , .box6{
+	background-color: blue;
+	color: white;
+	border: 1px solid white;
+}
+.box1{ width: 50px; height: 50px; }
+.box2{ width: 100px; height: 100px; display: inline-block; align-items: center; }
+
+.box4{ width: 50px; height: 80px; }
+.box5{ width: 100px; height: 150px; display: inline-flex; align-items: center; }

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+
+/* 외부 웹폰트 호출 : 눈누 */
+@font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* 호출된 웹폰트 적용 */
+#wrap{ font-family: 'TTWanjudaedunsancheB' }
+
+/* 헤더 구역 */
+#header{ 
+	width: 1200px; /*가로사이즈*/
+	margin: 0 auto; /* 구역 가로가운데정렬 */
+	display: flex;	/* 하위요소 배치방법*/
+	justify-content: space-between; /* 가로 균등배치 */
+}
+/* 헤더 로고 구역 */
+.logo_img img{ width: 100%; margin-top: 15px; } /* 이미지 크기 변경 */
+/* 헤더 메뉴 구역 */
+.munus{ }
+/* 상위 메뉴 */
+.top_menu{ 
+	text-align:right; 
+	margin: 15px 0px;	/*위아래 바깥여백=15px; 왼쪽오른쪽=0px*/ 
+	font-size: 12px;
+}	
+/* 본 메뉴 */
+.main_menu li{ 
+	display: inline-block;		/* li요소들 가로 배치 */
+	margin-left: 80px;			/* 바깥 왼쪽 여백 */
+	font-size: 18px;
+}
+/* 대표이미지 */
+#main_img{
+	width:100%; height:250px;			/* 요소의 크기 */
+	background-image:url("img/main_img.png"); /* 요소의 배경 이미지 = 요소 크기 필수 */
+	background-repeat:no-repeat; /* 자동채우기[기본값] repeat vs no-repeat */
+	background-position: center; /* 배경 위치 */
+	margin: 20px 0px;
+}
+
+/*본문 */
+#content{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex; /* 하위 요소 배치방법 */
+	justify-content: space-between;
+}
+
+/* 사이드바 */
+.side_bar{ width: 250px; }
+.side_bar h3{
+	font-size: 20px;
+	background-color: #516E7F;
+	color: white;
+	padding: 12px;				/* 안쪽여백 */
+}
+.side_bar li{
+	padding: 12px;					/* 안쪽여백 */
+	border-bottom: solid 1px #eeeeee; /* 아래쪽 테두리 */
+}
+
+/* 본문 */
+.main_content{ width: 930px; }
+.main_content h3{
+	font-size: 20px;
+	border-bottom: solid 2px #eeeeee; 
+	padding-bottom: 15px;		/* 안쪽여백 */
+	margin-bottom: 15px;		/* 바깥여백 */
+}
+
+/* 푸터 */
+#footer{
+	background-color: #2C2A29;		/* 배경색 */
+	color:white;					/* 글꼴 색 */
+	width: 100%; height: 100px;		/* 크기 */
+	margin-top: 30px; 				/* 바깥여백 */
+}
+.ft_box{
+	width: 1200px;					/* 가로 길이 */
+	margin: 0 auto;					/* 구역 가운데 정렬 */
+	display: flex;					/* 하위 요소 배치 방법 */
+	justify-content: space-between;	/* 하위 요소 가로 정렬 */
+	align-items: center;			
+	padding: 20px;
+}
+
+.main_logo{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

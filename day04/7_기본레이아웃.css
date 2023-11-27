@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+#wrap{
+	width: 900px;	/* 가로사이즈 */
+	margin: 0 auto;	/* 구역/박스 가로 가운데정렬*/
+}
+#header{
+	background-color: skyblue;
+	height: 100px;	/* 높이사이즈 */
+}
+#nav{
+	background-color: brown;
+}
+#main{
+	background-color: orange;
+	height: 600px;
+	display: flex;	/* 하위요소의 배치방법 */
+}
+#article{
+	background-color: gray;
+	width: 600px;
+}
+.section{
+	background-color: green;
+	margin: 10px 0px;
+}
+#aside{
+	background-color: purple;
+	width: 300px;
+}
+#footer{
+	background-color: black;
+	height: 200px;
+}
+
+
+
+header{
+	background-color: skyblue;
+	height: 200px;	/* 높이사이즈 */
+}
+nav{
+	background-color: brown;
+}
+
+main{
+	background-color: orange;
+	height: 600px;
+	display: flex;	/* 하위요소의 배치방법 */
+}
+article{
+	background-color: gray;
+	width: 600px;
+}
+section{
+	background-color: green;
+	margin: 10px 0px;
+}
+
+aside{
+	background-color: purple;
+	width: 300px;
+}
+footer{
+	background-color: black;
+	height: 200px;
+}
+
+
+
+

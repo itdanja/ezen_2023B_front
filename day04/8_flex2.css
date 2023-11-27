@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.container{ display: flex; }
+
+.box{
+	width: 10%; height: 50%;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+}
+/* 1. 정렬 */
+#flexbox1{ justify-content: flex-start; } /* 기본값:왼쪽부터 배치 */
+#flexbox2{ justify-content: flex-end; } /* 오른쪽부터 배치 */
+#flexbox3{ justify-content: center; } /* 가로 가운데 */
+#flexbox4{ justify-content: space-between; }
+#flexbox5{ justify-content: space-around; }
+#flexbox6{ justify-content: space-evenly; }
