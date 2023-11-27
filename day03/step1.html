@@ -24,7 +24,41 @@
     <h4 class="box6"> box6 </h4>
 
     <h4 class="box7"> box7 </h4>
-    
-    
+
+    <!-- p.68 -->
+    <!-- 
+        div(division) vs span : 구역/레이아웃
+        div : 블록
+            - display : block;
+            - 대표마크업 : <div> , <h> , <p> , <ul> , <ol>
+            - 사이즈가 적용O
+            - 한줄을 차지된 배치 
+        span : 인라인
+            - display : inline;
+            - 대표마크업 : <span> , <a> , <img>
+            - 사이즈가 적용X
+            - 한줄에 포함된 배치 
+        - 인라인-블록
+            - display : inline-block;
+            - 한줄에 포함되고 사이즈가 적용된 배치 
+        - 숨기기
+            - display : none;
+            - 화면에 표시 안함.
+    -->
+    <div> 구역1 </div>
+    <div> 구역1 </div>
+    <span> 구역2 </span>
+    <span> 구역2 </span>
+ 
+    <div> 글자1 <span class="s1">안녕하세요s1 inline </span> 글자2 </div>
+    <div> 글자1 <span class="s2">안녕하세요s2 block </span> 글자2 </div>
+    <div> 글자1 <span class="s3">안녕하세요s3 inline-block </span> 글자2 </div>
+    <div> 글자1 <span class="s4">안녕하세요s4 none </span> 글자2 </div>
+
+    <div> 글자1 <div class="d1">안녕하세요d1 inline </div> 글자2 </div>
+    <div> 글자1 <div class="d2">안녕하세요d2 block </div> 글자2 </div>
+    <div> 글자1 <div class="d3">안녕하세요d3 inline-block </div> 글자2 </div>
+    <div> 글자1 <div class="d4">안녕하세요d4 none </div> 글자2 </div>
+
 </body>
 </html>

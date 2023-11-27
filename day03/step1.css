@@ -65,3 +65,39 @@
     margin: 0 auto; /* 가로 가운데 정렬 */
 
 }
+
+div{
+    border: solid 1px red;
+    margin: 20px;
+    background: blanchedalmond;
+}
+span{ background-color: orange; }
+
+.s1{
+    display: inline; /* 인라인 : span 기본값 */
+    width: 200px; height: 200px; /* 가로 , 세로 사이즈 적용불가 */
+}
+.s2{
+    display: block; /* 블록 */
+    width: 200px; height: 200px; /* 가로 , 세로 사이즈 적용가능 */
+}
+.s3{
+    display: inline-block; /* 인라인-블록 */
+    width: 200px; height: 200px;
+}
+.s4{
+    display: none; /* 숨기기 */
+    width: 200px; height: 200px;
+}
+
+.d1{ display: inline; width: 200px; height: 200px;}
+.d2{ display: block; width: 200px; height: 200px;} /*블록 : div기본값 */
+.d3{ display: inline-block; width: 200px; height: 300px;}
+.d4{ display: none; width: 200px; height: 200px;}
+
+
+
+
+
+
+
