@@ -1,0 +1,20 @@
+
+/* 이미지 사이즈 */
+.bookimg{
+    width: 400px;
+}
+/* 제목 숫자 강조 */
+.tno{
+    font-size: 30px;
+    color: orange;
+}
+/* 내용 구역 */
+.content{
+    background-color: green; 
+    color: white;
+    padding: 20px;
+    width: 500px;
+}
+.orange{
+    color: orange;
+}
