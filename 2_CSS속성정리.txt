@@ -63,8 +63,46 @@ CSS : 캐스케이딩(상속-부/자) 스타일 시트 ( Cascading Style sheets 
     12. text-shadow :           : 텍스트 그림자
             x축 y축 흐림정도 색상  
 
+    ==== 박스 모델 관련 ====
+    1. border                   : 테두리 : 두께 선종류 색상
+        border-top , border-right ,  border-bottom , border-left
+        *선종류 : solid , dotted , double , dashed
+    2. padding                  : 안쪽여백 
+        padding-top , padding-right , padding-bottom , padding-left
+    3. margin                   : 바깥여백 
+        margin-top , margin-right , margin-bottom , margin-left
+
+        - 효율적 
+        padding: 10px ;                     전체
+        padding: 10px 20px;                 위아래 , 왼쪽오른쪽
+        padding: 10px 20px 30px 40px;       시계방향 [ 위 오른쪽 아래쪽 왼쪽 ]
+        - 박스모델 가운데정렬
+        margin : 0 auto;
+
+    4. box-sizing                   : 안쪽여백과 테두리를 사이즈에 포함여부 
+        box-sizing : content-box    : 포함X
+        box-sizing : border-box     : 포함O [ *권장 ]
+    5. width                        : 가로 사이즈
+    6. height                       : 세로 사이즈
+
+    7. display                      : 배치 방법
+        display: inline;            : 한줄에 포함된 배치 
+            마크업 : <span> , <img> , <a> 등
+            - width , height 적용불가 
+
+        display: block;             : 한줄을 차지한 배치 
+            마크업 : <div> , <h> , <p> , <ul><ul><li> 등
+            - width , height 적용가능 
+
+        display: inline-block;      : 한줄에 포함되고 사이즈가 적용된 배치 
+            - inline+block
+            - width , height 적용가능 
+
+        display: none;              : 표시 안함.
+
+
+
 4. css 색상 표현하는 방법 
     1. 색상이름 : red 
     2. 헥사코드 : #9b1010
     3. RGB색상 : rgb( 0~255 , 0~255 , 0~255 )
-    

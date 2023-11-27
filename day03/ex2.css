@@ -1,0 +1,39 @@
+/* 선택자 활용 */
+
+/* class명이 'title' 인 곳에 적용 */
+.title{
+    border-left: 10px solid green; /*왼쪽테두리*/
+    padding-left: 10px; /*왼쪽 안쪽여백 */
+}
+.content{
+    background-color: #E8E8E8; /*배경색*/
+    width: 400px; /* 가로 사이즈 */
+    border: 2px solid gray; /* 테두리 */
+    border-radius: 10px; /* 둥근모서리 */
+    padding: 40px; /*안쪽 여백 */
+}
+.contli{
+    margin-bottom: 15px; /* 바깥 아래쪽 여백 */
+}
+.info{
+    width: 300px; /* 가로 사이즈 */
+    border: 2px solid gray; /* 테두리 */
+    border-radius: 20px; /*둥근 모서리 */
+    padding: 20px; /* 안쪽 여백 */
+    margin: 20px 40px; /* 바깥쪽 여백 */
+}
+.contp{
+    border-bottom: dotted 1px gray ; /* 아래쪽 테두리 */
+    padding-bottom: 20px; /* 아래쪽 안쪽 여백 */
+    line-height: 160%;  /* 줄간격 */
+}
+.conth4{ text-align: right; } /* 텍스트 오른쪽 정렬 */
+
+
+
+
+
+
+
+
+

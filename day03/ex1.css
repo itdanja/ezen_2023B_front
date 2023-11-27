@@ -1,1 +1,40 @@
 /* 56p. ~ 71p. */
+body{ 
+    background-color: #bbf1ef;  /* 56p. 배경색 변경하기 */
+    font-family: sans-serif; /* 58p. 글꼴 지정하기 */
+}
+h1{
+    font-size: 18px; /* 58p. 글자 크키 변경하기 */
+    border : 3px solid #ffffff; /* 60p. 테구리 그리기 */
+    border-radius: 20px; /* 60p. 둥근 모서리 그리기 */
+    padding: 6px 0 ;     /* 62p. 안쪽 여백 : 상하6 좌우0 */
+    /* margin: 20px 0;      62p. 바깥 여백 : 상하20 좌우0  */
+    margin: 20px auto;  /* 64p. 블록 가운데 정렬 */
+    width: 300px;       /* 64p. 가로사이즈 */
+    text-align: center; /* 66p. 인라인 가운데정렬 */
+}
+/* p.66 : 나머지 요소 가운데 정렬  */
+p , ul { /* [공통부문] 2개이상의 선택자를 작성할때 ,(쉼표 구분) */
+    text-align: center;
+    margin-bottom: 20px;
+}
+img{ border-radius: 50%; } /* p.67 : 이미지를 둥글게 만들기  */
+/* p.68 : 버튼 만들기  */
+a{
+    background-color: #ff9a9e;
+    display: block;
+    padding: 20px 0;
+    border-radius: 4px;   /* p.70 : 둥근모서리  */
+    color : #ffffff; /* p.70 : 글꼴 색상  */
+    font-weight: bold; /* p.71 : 글꼴 진하게  */
+    text-decoration: none; /* 밑줄제거 */
+}
+/* p.69 : 버튼 만들기  */
+ul{   width: 300px;  margin: 0 auto; }
+li{ margin-bottom: 20px; }
+
+
+
+
+
+
