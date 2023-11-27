@@ -1,9 +1,17 @@
 
-1. CSS 적용하는방법
+CSS : 캐스케이딩(상속-부/자) 스타일 시트 ( Cascading Style sheets )
+    - HTML( 뼈대 )          -HTTP  
+    - CSS( 스타일- 옷 )
+    - JS( 행위/행동- 이벤트 )
+        - css와 js는 html에 포함된 구조 
+        
+1. HTML에 CSS 적용하는방법
     1. CSS파일 만들어서 HTML <head> 태그에 호출방식[*] 
         <link rel="stylesheet" href="css파일경로" > 
+
     2. HTML <head>태그에 <style> 태그를 이용하는 방식
         <style> </style> 
+
     3. HTML <마크업 style=""> style속성을 이용하는 방식 
         style=""
 
@@ -19,13 +27,17 @@
         <input class="titleInput">
         <table id="boardTable">
 
-        * 식별자 우선순위 [ 동일한 속성이 겹쳤을때 ]  
+        - 식별자 우선순위 [ 동일한 속성이 겹쳤을때 ]  
             * < 마크업 < class < id 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 
 3. CSS 속성 종류
     1. background-color : 배경색 
     ==== 폰트 관련 ====
     2. font-family :            폰트명
+
         - 웹폰트[ 눈누 홈페이지 추천 ]
         - 예시 
         @font-face { /* https://noonnu.cc/ -> 웹 폰트 */
@@ -34,6 +46,7 @@
             font-weight: 700;
             font-style: normal;
         }
+        
     3. font-size :              폰트크기 [ px:픽셀 ]
     4. font-style: italic;      : 기울기
     5. font-weight : bold;      : 진하게 

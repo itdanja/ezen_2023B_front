@@ -1,0 +1,67 @@
+/*
+    어디의{ 무엇을 : 어떻게; 무엇을 : 어떻게; }
+    1. 어디의[선택자]
+        1. * 2.마크업 3. .class 4. #id
+*/
+.box1{ 
+    border : 1px solid red; /* 테두리 : 두께 선종류 색상*/
+}
+.box2{
+    border-top : solid 1px blue;
+    border-right: dotted 2px orange;
+    border-bottom: double 3px red;
+    border-left: dashed 4px black ;
+}
+.box3{
+    border: solid 2px red ;
+    border-radius: 10px;     /* 둥근모서리 */
+}
+.box4{
+    border : solid 1px blue;
+    padding: 10px ; /* 안쪽 여백 */
+    margin: 20px; /* 바깥 여백 */
+}
+.box5{
+    border: solid 1px pink;
+    padding-top: 20px; /* 위 안쪽 여백 */ 
+    padding-right: 30px; /*오른쪽 안쪽 여백 */
+    padding-bottom: 40px; /*아래쪽 안쪽 여백 */
+    padding-left: 50px; /*왼쪽 안쪽 여백 */
+    margin-top: 50px; /*위 바깥 여백 */
+    margin-right: 60px; /*오른쪽 바깥 여백 */
+    margin-bottom: 70px; /* 아래쪽 바깥 여백 */
+    margin-left: 80px; /*왼쪽 바깥 여백 */
+}
+.box6{
+    border: solid 1px black;
+
+    padding: 10px 20px 30px 40px;
+    /* 위 오른쪽 아래쪽 왼쪽 의 안쪽여백 */
+    padding: 10px 20px;
+    /* 위+아래  왼쪽+오른쪽 의 안쪽여백 */
+    padding: 10px;
+    /* 위+오른쪽+아래쪽+왼쪽 의 안쪽여백 */
+
+    margin: 10px 20px 30px 40px;
+    /* 위 오른쪽 아래쪽 왼쪽 의 바깥여백 */
+    margin: 10px 20px;
+    /* 위+아래  왼쪽+오른쪽 의 바깥여백 */
+    margin: 10px;
+    /* 위+오른쪽+아래쪽+왼쪽 의 바깥여백 */
+}
+
+.box7{
+    width: 200px; /* 가로 사이즈 */
+    height: 200px ; /* 세로 사이즈 */
+    /* box-sizing: content-box ; :  200+20+20+10+10 => 260px    */
+    /* box-sizing: border-box; :  200 => 200px  : 가로 사이즈에 테두리와 안쪽여백 포함된 사이즈 */
+    box-sizing: border-box;
+    padding: 20px; 
+    border: solid 10px red;
+    
+    /*내용(content) 가운데정렬 */
+    text-align: center;
+    /*박스(box) 가운데정렬 */
+    margin: 0 auto; /* 가로 가운데 정렬 */
+
+}
