@@ -76,11 +76,14 @@ CSS : 캐스케이딩(상속-부/자) 스타일 시트 ( Cascading Style sheets 
         padding: 10px ;                     전체
         padding: 10px 20px;                 위아래 , 왼쪽오른쪽
         padding: 10px 20px 30px 40px;       시계방향 [ 위 오른쪽 아래쪽 왼쪽 ]
-        - 박스모델 가운데정렬
+
+        - 박스모델(block) 가운데정렬
         margin : 0 auto;
+        - 박스모델(inline) 가운데정렬
+        text-align : center;        - 텍스트 , img , a 등등
 
     4. box-sizing                   : 안쪽여백과 테두리를 사이즈에 포함여부 
-        box-sizing : content-box    : 포함X
+        box-sizing : content-box    : 포함X [ 기본값 ]
         box-sizing : border-box     : 포함O [ *권장 ]
     5. width                        : 가로 사이즈
     6. height                       : 세로 사이즈
@@ -91,7 +94,7 @@ CSS : 캐스케이딩(상속-부/자) 스타일 시트 ( Cascading Style sheets 
             - width , height 적용불가 
 
         display: block;             : 한줄을 차지한 배치 
-            마크업 : <div> , <h> , <p> , <ul><ul><li> 등
+            마크업 : <div> , <h> , <p> , <ul><ol><li> 등
             - width , height 적용가능 
 
         display: inline-block;      : 한줄에 포함되고 사이즈가 적용된 배치 

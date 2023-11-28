@@ -1,0 +1,62 @@
+/*
+    flex 2단계
+    1. 가로로 늘어놓고 싶은 요소들의 부모*요소 확인/찾기
+    2. 부모요소에 display:flex 지정한다.
+*/
+*{ box-sizing: border-box;}
+
+.box{ 
+    border: 2px solid blue;
+    /* 하위요소는 사이즈 기본값 : 상위요소 100% */
+    width: 100px;
+}
+.flexBox1{
+    border: 2px solid red;
+    width: 250px;   /* 상위요소 250px; */
+    display: flex; /* 하위요소를 가로배치  */
+    flex-wrap: nowrap ; 
+    /* flex 속성 : [기본값] 줄바꿈x , 자식요소들을 한줄 표시 하되 사이즈가 자동 변경 */
+}
+.flexBox2{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap; 
+    /* flex 속성 : 줄바꿈o , 자식요소들을 여러줄 표시 하된 사이즈를 유지 */
+}
+.flexBox3{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /* flex 속성 : 줄바꿈o , + 반대로 배치 */
+}
+.flexBox4{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: row ; /* 배치 방향 : row[기본값] : 가로배치 */
+}
+.flexBox5{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: column ; /* 배치 방향 : column : 세로배치 */
+}
+.flexBox6{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: row-reverse ; /* 배치 방향 : row 반대 */
+}
+.flexBox7{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: column-reverse ; /* 배치 방향 : column 반대 */
+}
+
+
+
+
+
