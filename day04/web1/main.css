@@ -3,8 +3,6 @@
     2.하위선택자를 선택할떄는 상위선택자 하위선택자 (띄어쓰기) 구분
 */
 
-/* 작업용 */
-
 /* 공통 부문 */
 li{ list-style-type: none;} /* 글머리 제거 */
 a{ color: black; text-decoration: none;} /* a태그의 색상,밑줄 제거*/
@@ -65,9 +63,13 @@ a{ color: black; text-decoration: none;} /* a태그의 색상,밑줄 제거*/
     height: 100px; margin-top: 20px;
     color: white;
 }
-#ft_box{
-    width: 1280px; margin: 0 auto;
-    
-}
+    #ft_box{
+        width: 1280px; margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    #ft_box img{
+        margin-top: 10px;
+    }
 
 
