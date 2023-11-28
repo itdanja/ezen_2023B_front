@@ -1,0 +1,39 @@
+.container{
+    display: flex; /* 하위 요소들 가로배치 */
+    border: 5px solid red;
+    /* width : 100%  기본값 */
+}
+.box{  background-color: black; color: white; width: 10%; }
+
+#flexBox1{ justify-content: flex-start; } /* [기본값] 왼쪽부터 정렬  */
+#flexBox2{ justify-content: flex-end; } /* 오른쪽부터 정렬  */
+#flexBox3{ justify-content: center;}    /* 가운데 정렬 */
+#flexBox4{ justify-content: space-between;} /* 양쪽 끝에 여백없이 사이 여백 균등 정렬 */
+#flexBox5{ justify-content: space-around; } /* 양쪽 끝에 여백은 절반으로 하고 사이 여백 균등 정렬 */
+#flexBox6{ justify-content: space-evenly; } /* 양쪽 끝에 여백과 사이 여백 균등 정렬 */
+/* 여러개 선택자 작성시  , (쉼표) 구분 */
+
+.flexBox1 , .flexBox2 , .flexBox3 , .flexBox4 , .flexBox5{ 
+    display: flex; width: 200px;  
+    border: 5px solid blue;
+}
+
+.flexBox1{ align-items: stretch ; } /* [기본값] 자식요소는 컨테이너의 높이만큼 자동 늘어남. */
+.flexBox2{ align-items: flex-start; }/* 윗변 정렬 */
+.flexBox3{ align-items: flex-end;}   /* 밑변 정렬 */
+.flexBox4{ align-items: center;}    /* 중앙 정렬 */
+.flexBox5{ 
+    flex-wrap: wrap;
+    align-items: baseline;   /* 내용물 아래 기준으로 정렬*/
+} 
+
+.box1 , .box2 , .box3 , .box4 , .box5 , .box6 {  
+    background-color: red;  color: white; 
+    border: 1px solid white;
+}
+.box1{ width: 50px; height: 50px;}
+.box2{ width: 100px; height: 100px;  }
+
+.box4{ width: 50px; height: 80px; }
+.box5{ width: 100px; height: 150px; display: inline-flex; align-items: center; }
+
