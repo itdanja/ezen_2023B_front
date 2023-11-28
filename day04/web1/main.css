@@ -1,0 +1,21 @@
+
+/* 작업용css */
+*{
+    border: 2px solid red;
+    padding: 10px;
+}
+#header{
+    width: 1280px;      /* 표준 PC모니터 사이즈 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#main{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex; /* 하위 요소들 가로배치 */
+    flex-wrap: nowrap; /* 생략 가능 */
+}
+#aside{ width: 280px ; }
+#article{ width: 1000px ; }
+

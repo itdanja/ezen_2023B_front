@@ -148,3 +148,12 @@ HTML : 하이퍼텍스트 마크업 언어( HyperText Markup Language )
     <div>
     
     <span>
+
+13. 레이아웃용 시맨틱 태그 
+    1. <header>                         <div id="header">
+    2. <nav>                            <div id="nav">
+    3. <main>                           <div id="main">
+    4. <article>                vs      <div id="article">
+    5. <aside>                          <div id="aside">
+    6. <footer>                         <div id="footer">
+    7. <section>                        <div id="section">
