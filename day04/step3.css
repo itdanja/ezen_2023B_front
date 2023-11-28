@@ -1,0 +1,79 @@
+
+*{
+    border: 2px solid red;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+
+#webWrap{
+    width: 900px; /* 가로 사이즈 */
+    margin: 50px auto; /* 박스 가운데 정렬*/
+}
+header{  background-color: blue; color: white; }
+nav{ background-color: brown; color: white; }
+main{
+    background-color: orange;
+    display: flex;
+    flex-wrap: nowrap; 
+}
+article{
+    width: 600px;   /* 부모900px 에서 600px 사용  */
+}
+aside{
+    width: 300px;   /* 부모900px 에서 300px 사용  */
+}
+footer{ background-color: black; color: white;}
+
+
+
+
+
+
+
+#header{
+    background-color: blue; color: white;
+}
+#nav{
+    background-color: brown; color: white;
+}
+#main{
+    background-color: orange;
+    display: flex;
+    flex-wrap: nowrap; /* 기본값이라서 생략가능*/
+}
+#article{
+    width: 600px;
+}
+#aside{
+    width: 300px;
+}
+#footer{
+    background-color: black; color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
