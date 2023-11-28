@@ -1,21 +1,73 @@
+/* 
+    1.선택자를 여러개 선택할때는 , (쉼표) 구분
+    2.하위선택자를 선택할떄는 상위선택자 하위선택자 (띄어쓰기) 구분
+*/
 
-/* 작업용css */
-*{
-    border: 2px solid red;
-    padding: 10px;
-}
-#header{
+/* 작업용 */
+
+/* 공통 부문 */
+li{ list-style-type: none;} /* 글머리 제거 */
+a{ color: black; text-decoration: none;} /* a태그의 색상,밑줄 제거*/
+
+#header{ /*헤더*/
     width: 1280px;      /* 표준 PC모니터 사이즈 */
-    margin: 0 auto;
+    margin: 20px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 가로 균등 정렬 */
 }
-#main{
+    #main_Logo img{ /* 'main_Logo ' id 하위에 img 마크업 선택 */
+        margin-top: 5px;
+    }
+    #main_menu{ /* 헤더의 오른쪽 메인메뉴 */
+        display: flex;
+        justify-content: space-between; /* 가로 균등 정렬 */
+        font-size: 20px;
+        width: 700px;
+    }
+    #top_menu{
+        display: flex;
+        justify-content: flex-end;      /* 오른쪽 정렬 */
+    }
+
+    #top_menu span{ margin : 0 10px; } /* 'top_menu' id 하위에 span 마크업 선택  */
+
+#main{ /* 본문 */
     width: 1280px;
     margin: 0 auto;
     display: flex; /* 하위 요소들 가로배치 */
     flex-wrap: nowrap; /* 생략 가능 */
+    justify-content: space-between;
 }
-#aside{ width: 280px ; }
-#article{ width: 1000px ; }
+    #aside{ width: 250px ; } /*사이드바*/
+    #aside h3{
+        font-size: 20px;
+        background-color: cadetblue;
+        color: white;
+        padding: 12px;
+    }
+    ul{ padding: 0px; margin: 10px 0px;} /* ul 기본여백 제거 */
+    #side_menu li{
+        padding: 10px;
+        border-bottom: solid 1px #e8e8e8;
+    }
+    #article{ width: 1000px ; } /*본문내용*/
+    #article h3{
+        font-size: 20px;
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 15px;
+    }
+    #article img{
+        display: block; margin: 0 auto; /* img마크업을 block 변경후 가운데배치*/
+    }
+
+#footer{
+    background-color: #2C2A29;
+    height: 100px; margin-top: 20px;
+    color: white;
+}
+#ft_box{
+    width: 1280px; margin: 0 auto;
+    
+}
+
 
