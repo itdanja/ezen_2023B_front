@@ -20,7 +20,10 @@ a:visited{ /*해당요소를 클릭한 적이 있으면 적용*/
 #header{
 	background-color:#eeeeee;
 }
-#header > ul{ text-align: center;}
+#header > ul {
+	display: flex;
+	justify-content: center;
+}
 .drop_menu{
 	display: inline-block;
 	margin-left: 30px;
@@ -31,9 +34,7 @@ a:visited{ /*해당요소를 클릭한 적이 있으면 적용*/
 	position:absolute;
 	top:20px;
 	width:80px;
-	border-right:solid 1px #eeeeee;
-	border-bottom:solid 1px #eeeeee;
-	border-left:solid 1px #eeeeee;
+	background-color: yellow;
 }
 .drop_menu:hover .sub_menu{
 	display:block;
@@ -43,15 +44,16 @@ a:visited{ /*해당요소를 클릭한 적이 있으면 적용*/
 #header2{
 	background-color:#eeeeee;
 }
-#dropMenus{
+#header2 > ul {
 	position: relative;
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 .drop_menu2{
 	display: inline-block;
 	margin-left: 30px;
 }
-#dropMenus:hover #dropContent{
+#header2 > ul:hover #dropContent{
 	display:block;
 }
 #dropContent{
@@ -59,13 +61,12 @@ a:visited{ /*해당요소를 클릭한 적이 있으면 적용*/
 	position:absolute;
 	top:20px;
 	width:100%;
-	border-right:solid 1px #eeeeee;
-	border-bottom:solid 1px #eeeeee;
-	border-left:solid 1px #eeeeee;
-	box-sizing: border-box;
+	background-color: yellow;
 }
 #content{
-	width: 800px;
+	width: 600px;
 	margin: 0 auto;
-	text-align: left;
+}
+#content > div{
+	display: flex; justify-content: space-between;
 }
