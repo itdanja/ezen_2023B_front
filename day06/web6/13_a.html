@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="13_a.css" rel="stylesheet">
+
+</head>
+<body>
+	<!-- <a href=""> :  하이퍼링크 대그 -->
+	<a href="https://www.naver.com">[절대경로]네이버</a>
+	<a href="http://www.instagram.com">[절대경로]인스타그램</a>
+	<a href=http://192.168.17.131:8080/frontend/webpage/web1/index.html>[절대경로]웹2</a>
+	<!-- 웹에서 프로젝트 서버 절대경로
+		https://ip주소:8080/ 프로젝트명 / {public생략} / 폴더명 / 폴더명 / 파일
+	 -->
+	<!-- 웹에서 프로젝트 서버 상대경로 -->
+	<a href="../webpage/web2/index.html">[상대경로]WEB2</a>
+	<a href="/frontend/webpage/web2/index.html">[상대경로]WEB2</a> <!-- 권장 -->
+	<!-- href="프로젝터명부터 / 폴더 / 파일  -->
+	<a href=""></a>
+	
+	<!-- 상단메뉴에 서브메뉴 만들기 -->
+	<div id="header">
+		<ul >
+			<li class="drop_menu"><a href="#">메뉴1</a></li>
+			<li class="drop_menu">
+				<a href="#">메뉴2</a>
+				<!-- hover시 보여질 리스트  -->
+				<ul class="sub_menu">
+					<li><a href="#">자켓</a>
+					<li><a href="#">블라우스</a>
+					<li><a href="# ">티셔츠</a>
+				</ul>
+			</li>
+			<li class="drop_menu"><a href="#">메뉴3</a></li>
+			<li class="drop_menu">
+				<a href="#">메뉴4</a>
+				<ul class="sub_menu">
+					<li><a href="#">청바지</a>
+					<li><a href="#">반바지</a>
+					<li><a href="# ">조거팬츠</a>
+				</ul>
+			</li>
+			<li class="drop_menu"><a href="#">메뉴5</a></li>
+		</ul>
+	</div>
+	<br/><br/><br/><br/><br/><br/><br/>
+	<!-- 상단메뉴에 서브메뉴 만들기 -->
+	<div id="header2">
+		<ul id="dropMenus">
+			<li class="drop_menu2"><a href="#">메뉴1</a></li>
+			<li class="drop_menu2"><a href="#">메뉴2</a></li>
+			<li class="drop_menu2"><a href="#">메뉴3</a></li>
+			<li class="drop_menu2"><a href="#">메뉴4</a></li>
+			<li class="drop_menu2"><a href="#">메뉴5</a></li>
+			<div id="dropContent">
+				<div id="content">
+					<li><a href="#">청바지</a>
+					<li><a href="#">반바지</a>
+					<li><a href="# ">조거팬츠</a>
+				</div>
+			</div>
+		</ul>
+
+	</div>
+
+</body>
+</html>

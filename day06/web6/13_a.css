@@ -1,0 +1,71 @@
+@charset "UTF-8";
+*{padding:0; margin:0;
+	list-style: none;}
+a{
+	color:#000000;
+	text-decoration: none; /*밑줄, 윗줄, 취소선*/
+}
+/* 액션 */
+a:hover { /*해당요소에 마우스를 올렸을때*/
+	color:orange;
+	background-color: #000000;
+}
+a:active{ /*해당 요소를 클릭하고 있을 때*/
+	color:marinblue;
+}
+a:visited{ /*해당요소를 클릭한 적이 있으면 적용*/
+	color:red;
+}
+/*-----------------------------------------------*/
+#header{
+	background-color:#eeeeee;
+}
+#header > ul{ text-align: center;}
+.drop_menu{
+	display: inline-block;
+	margin-left: 30px;
+	position:relative;
+}
+.sub_menu{
+	 display: none; /*숨김*/
+	position:absolute;
+	top:20px;
+	width:80px;
+	border-right:solid 1px #eeeeee;
+	border-bottom:solid 1px #eeeeee;
+	border-left:solid 1px #eeeeee;
+}
+.drop_menu:hover .sub_menu{
+	display:block;
+}
+
+/*-----------------------------------------------*/
+#header2{
+	background-color:#eeeeee;
+}
+#dropMenus{
+	position: relative;
+	text-align: center;
+}
+.drop_menu2{
+	display: inline-block;
+	margin-left: 30px;
+}
+#dropMenus:hover #dropContent{
+	display:block;
+}
+#dropContent{
+	display: none;
+	position:absolute;
+	top:20px;
+	width:100%;
+	border-right:solid 1px #eeeeee;
+	border-bottom:solid 1px #eeeeee;
+	border-left:solid 1px #eeeeee;
+	box-sizing: border-box;
+}
+#content{
+	width: 800px;
+	margin: 0 auto;
+	text-align: left;
+}

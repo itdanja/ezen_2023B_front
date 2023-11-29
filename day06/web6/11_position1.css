@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9
+, .box10, .box11, .box12
+{
+	width: 100px;
+	height:80px;
+	background-color: yellow;
+	border:solid 1px red;
+}
+.box2{
+	position: relative; 
+	/*
+		relative : 상대위치 :box2의 위치를 상대위치로 하겠다?
+	*/
+	left: 50px; 
+	top:50px
+	/*
+		자신의 원위치가 기준잡고 이동
+		왼쪽에서 50 만큼 box2를 밀어낸다
+		-50이면 바깥쪽으로 50만큼 나간다.
+		+는 박스권 안쪽으로 -는 박스권 바깥쪽으로 이동
+	*/
+}
+.box5{
+	position: absolute;/* absolute: 절대위치	*/
+	left: 50px; top:50px /*직계부모의 위치 기준 body인경우 좌측 상단이 0.0*/
+}
+.box8{
+	position: fixed;/*고정위치- 디바이스 화면에 위치 고정*/
+	right:50px;
+	bottom:50px;
+}
+.parent1{
+	position: relative;
+	border:solid 1px green;
+}
+.box11{
+	position: absolute;/* absolute: 절대위치	*/
+	left: 100px; top:10px;
+	/*부모의 포지션이 relative가 아니면 그 차상위 부모인 (<body>)위치를 기준으로 잡는다*/
+}
+.box12{
+	position: static;/*기본값 : 순서대로 배치*/
+	left: 100px; /* <== 안먹힘*/
+	position: 
+}

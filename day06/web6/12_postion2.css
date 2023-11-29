@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.parent{
+	width:700px; height:500px;
+	margin:0 auto;
+	background-color:gray;
+	position: relative;
+}
+.box{
+	width:100px;
+	height:70px;
+	background-color: yellow;
+	border-radius: 15px; /*둥근모서리*/
+	text-align: center;
+	position:absolute;
+}
+.box1{ left:300px; top:70px;}
+.box2{ left:150px; top:140px;}
+.box3{ left:150px; top:280px;}
+.box4{ left:300px; top:350px;}
+.box5{ left:450px; top:280px;}
+.box6{ left:450px; top:140px;}
+/*------------------------------------------------*/
+#header{
+	display: flex;
+	flex-direction: row; /*가로배치 기본값. 생략가능*/
+	background-color: white;
+	border-bottom: solid 2px  #eeeeee;
+	position: sticky; /*스크롤이 이동했을때 위치고정*/
+	top:0px; /*가장 윗변에 */
+	z-index: 1;
+	/*
+		다른 요소와 위치가 겹칠때 우선순위를 정함
+		- 기본값 = 0
+		- z-index: 겹쳤을때 순서를 정할 수 있음, 숫자가 높을수록 앞에 배치
+	
+	
+	*/
+}
+.h_menu li{
+	display: inline-block;
+}
+.popsup{
+	background-color:white;
+	width: 200px;
+	height:200px;
+	border: solid 1px gray;
+	/* display:none; 삭제 버튼의 이벤트가 적용된경우 */
+	position: fixed;
+	right:5px;
+	bottom:10px;
+	/*메뉴와 본문, 팝없이 같이 겹쳤을때 우선순위*/
+	z-index:2;
+}

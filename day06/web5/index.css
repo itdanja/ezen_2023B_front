@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* 전체 배경색 */
+body{ background-color: #F5F6F7; }
+/* 기본 여백 제거 , 기본폰트 */
+*{ padding: 0px; margin: 0px; font-family: "맑은 고딕" }
+/* a 태그의 기본값 수정 */
+a{ color: black; text-decoration: none; }
+/* 페이지 전체 구역  */
+#wrap{ 	width: 460px;  margin: 0 auto; }
+/* 헤더 로고 이미지 세로크기 변경 */
+#header .h_logo img{ height: 50px; }
+/* 헤더 로고 구역 정렬과 여백 설정 */
+#header .h_logo{ text-align: center; margin: 50px 0px; }
+
+h5{
+	margin: 20px 0px 5px 0px;
+}
+/* ----------------- 본문 --------------*/
+.signup_input{
+	border: 1px solid #DEDEDE;
+	background-color: white;
+	padding: 10px;
+	display: flex;
+	flex-wrap: nowrap; /* 기본값/ 자식요소들의 사이즈가 컸을때 줄바꿈X */
+	align-items: center; /* 세로정렬*/
+
+}
+.input_id{
+	border: none; /* 테두리 없애기 */
+	width: 100%;
+	height: 30px;
+}
+/* 포커스:커서 들어왔을때 액션 속성 */
+*:focus{ outline: none; } /* 커서가 있을떄 포커스테두리 제거 */
+.signup_at{ color: #AEAEAE; }
+
+/* 네이버 아이콘 배경으로 넣기 */
+.signup_icon{
+	background-image: url("https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png");
+	width: 25px; height: 25px; /* 해당 사이즈 */
+	background-size: 120px 75px; /* 배경 사이즈 */
+	/* background-position-x: 10px; 배경 위치 x좌표 */
+	/* background-position-y: 10px;  배경 위치 y좌표 */
+}
+/* 생년월일 구역 */
+.birthbox{ display: flex; }
+/* 월 구역*/
+.birthM{ margin-left: 20px; margin-right: 20px; }
+.birthY , .birthM , .birthD{ width: 120px; }
+
+.info{ font-size: 10px; color: #B3C5BF; }
+
+/*  휴대전화입력,버튼 구역 */
+.phonebox{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0px;
+}
+/* 인증버튼 */
+.btn_auth{
+	background-color: #03C75A;
+	border: none; color: white;
+	width: 120px; 
+	font-weight: bold;
+}
+.input_phone{ width:  300px; }
+.auth_input{ background-color:#F5F6F7;  }
+
+/* 가입 버튼 */
+.btn_signup{
+	background-color: #03C75A;	/*버튼 색상 */
+	border: none; color: white; /*테두리x , 폰트색상 */
+	width: 100%; height: 50px; /* 버튼 사이즈 */
+	font-size: 20px;
+	font-weight: bold;
+	margin: 30px 0px;
+}
+/* 푸터 상단 링크 구역 */
+#footer{
+	text-align: center;
+}
+.ft_top a{ font-size: 8px; }
+.ft_sub{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5px;
+}
+.ft_sub img{ height: 10px; padding: 10px;}
+.aline{ font-size: 5px; color: #e8e8e8; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
