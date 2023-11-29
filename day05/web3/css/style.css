@@ -1,0 +1,50 @@
+body{ 
+    background-image: url("../images/bg.png");  /* 94p. 백그라운드 이미지 */
+    font-size: 16px;  /* 95p. 글자 관련 속성 */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+/* ============================  헤더  ============================ */
+header{
+    width: 1240px;    /* 95P. 헤더영역을 가운데 정렬 */
+    margin: 0 auto; margin-bottom: 44px;
+}
+h1{ /* 96p. 로고 가운데 정렬 */
+    text-align: center; 
+    padding: 20px 0px 16px;
+}
+/* 96~97 p. !!!!: 네비게이션 가로로 정렬 */
+/* 상위선택자를 통해 하위선택자를 호출하는 방법 : 띄어쓰기로 구분 */
+header nav ul { 
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #7c5d48;
+    border-bottom: 2px solid #7c5d48;
+    background-color: rgba(255, 255, 255, 0.42);
+    /* rgba(레드 , 그린 , 블루 , 투명도(1:100%) */
+    padding: 12px 0px 10px;
+}
+header nav ul li{ margin: 0 20px; }
+header nav ul li a{  font-size: 22px; font-weight: bold; color: #7c5d48; }
+
+/* p.99  [특정상태일때=가상클래스] 마우스 커서를 올렸을때의 효과  :hover */
+header nav ul li a:hover{
+    text-decoration: underline double; /* 텍스트의 선*/
+}
+
+/* ============================ 본문 ============================ */
+/* p.101 main태그와 aside태그를 가로 배치 */
+div{
+    width: 1240px;
+    margin: 0 auto 50px;
+    display: flex; /* !!!!  */
+    justify-content: space-between; /* !!!!  */
+} 
+/* p.102 왼쪽 :  main태그  /  오른쪽 :  aside태그*/
+main{
+    width: 920px;
+    background-color: #ffffff;
+}
+aside{
+    width: 284px;
+}
