@@ -93,3 +93,23 @@ time{
 .postdate{  margin-bottom: 26px; }
 /* 113p */
 .eyecatch{ margin-bottom: 26px; }
+
+article h3{ /* 113p */
+    border-bottom: 2px solid #6ab547;
+    margin-bottom: 20px;
+    font-size: 28px; font-weight: 600;
+    /* 114p */
+    background-image: url("../images/h2_icon.png"); /* 배경 이미지 */
+    background-repeat: no-repeat ; /* 여백에 채우기    no-repeat[채우기안함] */
+    background-position: left bottom; /* 왼쪽 아래 */
+    padding: 20px 10px 10px 48px; /* 여백 */
+}
+/* 115p 줄간격 */
+article section p{ line-height: 160%; margin-bottom: 24px; }
+article section{ margin-bottom: 50px;}
+/* 117p */
+footer{
+    background-color: #523f2e; color: #ffffff; text-align: center; padding: 14px 10px 20px;
+}
+ 
+
