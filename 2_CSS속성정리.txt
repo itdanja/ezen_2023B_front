@@ -34,7 +34,12 @@ CSS : 캐스케이딩(상속-부/자) 스타일 시트 ( Cascading Style sheets 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 
 3. CSS 속성 종류
-    1. background-color : 배경색 
+    1. background-color : 색상                  : 배경색 
+    2. background-image : url("이미지경로")     : 배경이미지
+        - background-repeat :                   : 여백이 있을경우 배경 반복 여부
+            repeat[기본값] , no-repeat
+        -background-position :                  : 배경이미지 위치 
+
     ==== 폰트 관련 ====
     2. font-family :            폰트명
 
@@ -61,7 +66,8 @@ CSS : 캐스케이딩(상속-부/자) 스타일 시트 ( Cascading Style sheets 
         underline 밑줄 
         overline 윗줄 
     12. text-shadow :           : 텍스트 그림자
-            x축 y축 흐림정도 색상  
+        x축 y축 흐림정도 색상  
+    13. list-style-type         : 목록 사용시 글머리(목록의 마커 스타일)
 
     ==== 박스 모델 관련 ====
     1. border                   : 테두리 : 두께 선종류 색상
@@ -130,6 +136,12 @@ CSS : 캐스케이딩(상속-부/자) 스타일 시트 ( Cascading Style sheets 
                     center          : 가운데 정렬 
                     baseline        : 내용물 아래 기준으로 정렬
 
+        8. box-shadow               : 박스모델 그림자 
+            x축 y축 흐림정도 색상  
+        
+        9. overflow                 : 하위요소가 상위요소[고정사이즈] 보다 커질때
+            visible[기본값] , hidden , scroll , auto 
+            
 4. css 색상 표현하는 방법 
     1. 색상이름 : red 
     2. 헥사코드 : #9b1010

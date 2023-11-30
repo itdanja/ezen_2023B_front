@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>  
+    
+    <div id="wrap"> <!-- 전체 레이아웃 -->
+
+        <div id="header"> <!-- 헤더 -->
+            <div id="headerLogo">
+                <a href="https://www.naver.com">
+                    <img src="img/naverlogo.png" />
+                </a>
+            </div>
+        </div>  
+
+        <form id="main">    <!-- 본문 -->
+
+            
+            <h5>아이디</h5> <!-- 아이디 -->
+            <div class="inputBox">
+                <input type="text" maxlength="25" />
+                <span>@naver.com</span>
+            </div>
+
+            <h5>비밀번호</h5>  <!-- 비밀번호 -->
+            <div class="inputBox">
+                <input type="password" maxlength="25" />
+                <span class="inputIcon" id="pwIcon"></span>
+            </div>
+
+            <h5>비밀번호 확인</h5>  <!-- 비밀번호 -->
+            <div class="inputBox">
+                <input type="password" maxlength="25" />
+                <span class="inputIcon" id="pwConfirmIcon"></span>
+            </div>
+
+            <h5>이름</h5>  <!-- 이름 -->
+            <div class="inputBox">
+                <input type="text" maxlength="25" />
+            </div>
+
+        </form> 
+        
+        <div id="footer">   <!-- 푸터 -->
+            <div id="footerBox">
+                <div id="ftTop"></div> 
+                <div id="ftBottom"></div>
+            </div>
+        </div> 
+
+    </div>
+
+</body>
+</html>

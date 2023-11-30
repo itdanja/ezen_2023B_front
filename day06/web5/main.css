@@ -1,0 +1,48 @@
+
+/* 기본 여백 제거 1.직접제거 2.css/cdn 파일 */
+*{  padding: 0; margin: 0; }
+a{ color: black; text-decoration: none;} 
+body{  background-color: #f5f6f7 ; }
+
+#wrap{ width: 500px; margin: 0 auto; }
+
+/* =============== 헤더 ============ */
+#headerLogo{ text-align: center; margin: 50px 0px; }
+#headerLogo img{ height: 50px; }
+
+/* =============== 본문 ============ */
+/* ------- 1. 입력상자 만들기 -------------  */
+.inputBox{
+    background-color: white;
+    border: 1px solid #dedede;
+    padding: 10px;
+    display: flex; flex-wrap: nowrap; 
+    align-items: center; /* 세로 정렬 */
+}
+.inputBox input{
+    border: none; /* 테두리 제거 */
+    background-color: white;
+    height: 30px; width: 100%;
+}
+.inputBox span{
+    color: #aeaeae;
+}
+*:focus{ outline: none; } /* 포커스 : 커서가 깜박거림 상태.. */
+/* ------------------------------- */
+h5{ margin: 20px 0px 5px 0px;  }
+
+/* ------- 2. 배경을 이용한 아이콘 삽입하기 -------------  */
+.inputIcon{
+    width: 25px; height: 25px;
+    background-image: url("https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png");
+    background-size: 120px 75px; /* 배경 가로 , 세로 사이즈 */
+}
+#pwIcon{
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+#pwConfirmIcon{
+    background-position-x: -78px;
+    background-position-y: 0px;
+}
+
