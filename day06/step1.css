@@ -1,0 +1,48 @@
+.box{
+    width: 100px; height: 100px;
+    background-color: yellow; 
+    border: 3px solid red;
+}
+.box2{
+    position: relative ; /* 위치 : relative 상대위치 */
+    /* top , left , bottom , right : 위치 좌표 */
+    top : 50px; left: 50px; 
+    background-color: red;
+}
+.box5{
+    position: absolute; /* 위치 : absolute 절대위치 */
+    top : 50px; left: 50px;
+    background-color: blue;
+}
+.box8{
+    position: static;   /* 위치 : static 작성순서대로[기본값] */
+    top:50px; left: 50px;   /* 위치 좌표 사용 불가능 */
+    background-color: brown;
+}
+.box11{
+    position: fixed;
+    background-color: aqua;
+    right: 10px; bottom: 200px;
+}
+.parent{
+    position: relative;
+    padding: 10px;
+    background-color: bisque;
+}
+.box14{
+    position: absolute;
+    background-color: aliceblue;
+    top: 50px; left: 50px;
+}
+/*
+    position: static    기본값   : 작성순서대로 배치 [위치속성x]
+    position: relative  상대위치 : 자신의 원위치로 부터 기준
+    position: absolute  절대위치 : 부모의 위치 기준 
+    position: fixed     고정위치 : 디바이스 화면에 위치 고정
+    position: sticky             : 디바이스 화면으로부터 벗어나갔을때 위치고정
+        top , bottom , left , right 
+    z-index : 우선순서번호          : 높을수록 z축 순서 지정 
+    
+    
+*/
+ 

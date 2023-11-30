@@ -1,0 +1,37 @@
+
+#header{
+    display: flex;
+    background-color: aqua;
+    position: sticky; /* 해당 요소가 가려질때 위치고정*/
+    top: 0px;
+    z-index: 3; /* 다른 요소와 겹쳤을때 우선순위*/
+}
+#header ul li{ display: inline-block;}
+#popup{
+    background-color: red;
+    width: 200px; height: 200px;
+    position: fixed; /* 위치 고정 */
+    right: 5px; bottom: 10px;
+    z-index: 1; /* 다른 요소와 겹쳤을때 우선순위*/
+}
+
+#parent{
+    width: 700px; height: 500px;
+    margin: 0 auto;
+    background-color: blueviolet;
+    position: relative;
+}
+#parent div{
+    width: 100px; height: 70px;
+    background-color: yellow;
+    border-radius: 15px;
+    position: absolute;
+}
+#box1{ top: 100px;  left: 300px; }
+#box2{ top: 170px;  left: 150px; }
+#box3{ top: 310px;  left: 150px; }
+#box4{ top: 380px;  left: 300px; }
+#box5{ top: 310px;  left: 450px; }
+#box6{ top: 170px;  left: 450px; }
+
+
