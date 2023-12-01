@@ -1,0 +1,12 @@
+
+ /* 테스트 */
+*{   border: 2px solid red; padding: 10px;  }
+
+/* =================== 본문 ================== */
+#mainWrap{
+    width: 1620px; margin: 0 auto;
+}
+/* =================== 푸터 ================== */
+#footer #inner{
+    width: 1400px; margin: 0 auto;
+}
