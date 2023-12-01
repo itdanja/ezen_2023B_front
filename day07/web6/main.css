@@ -1,6 +1,82 @@
 
  /* 테스트 */
-*{   border: 2px solid red; padding: 10px;  }
+
+
+/* =================== 공통 부문 ================== */
+*{  
+    padding: 0px; margin: 0px;  /* 1.기본 여백 제거 */
+    font-family: 굴림;          /* 2.폰트 [ 웹폰트 ]*/
+    font-size: 12px;            /*  전체적인 폰트사이즈 */
+    box-sizing: border-box;     /* 3. 안쪽여백,테두리를 포함한 사이즈 모델 */
+}
+a{ color: black; text-decoration: none; } /* 4.a태그의 색상,밑줄 제거 */
+li{ list-style-type: none; } /* 5. 글머리 제거 */
+
+/* =================== 헤더 ================== */
+#header{ 
+    width: 100%; /* 부모요소의 사이즈를 100% 사용하겠다는 뜻 = 기본값 = 생략가능 */
+}
+    /* 상단메뉴 */
+#header #topMenu{  }
+    /* #header #topMenu > li{ display: inline-block;  } */
+    #header #topMenu {
+        display: flex; /* 하위요소 배치 방법 */
+        flex-direction: row;  /* 가로배치[기본값] */
+        justify-content: flex-end ; /* 가로정렬 -> 오른쪽 */
+        align-items: center /*세로정렬 -> 가운데 */;
+        padding: 10px; margin-right: 10px;
+    }
+    #header #topMenu > li > span{ padding: 0px 5px; }
+
+     /* 메인메뉴 */
+#header #mainMenu{
+    display: flex; justify-content: space-between;   align-items: center;
+    /* 양쪽 끝에 여백 없이 */
+    padding: 20px;
+}
+    #header #mainMenu ul{
+        display: flex; justify-content: space-between; align-items: center;
+        font-weight: bold; font-size: 18px;
+        width: 70% ; /* 상위요소의 사이즈 100% 에서 60% */
+    }
+    #header #mainMenu > form { border-bottom: 1px solid black; }
+    #header #mainMenu > form > input{ border: none; padding: 10px; font-size: 16px; }
+    *:focus{ outline: none;} /* 커서가 있을때 outline 제거 */
+    #header #mainMenu > form > img { height: 20px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =================== 본문 ================== */
 #mainWrap{
