@@ -82,7 +82,7 @@
         <div class="innerWrap">
           <h2>RSVP</h2>
           <form action="" method=""> <!-- p.125 폼  -->
-            <p> <!-- p.126 radio type에서는 name을 동일하게 해야 단일선택 가능. -->
+            <p class="attendRadio"> <!-- p.126 radio type에서는 name을 동일하게 해야 단일선택 가능. -->
               <label><input type="radio" name="attend" value="참석" checked="checked" />참석</label> 
               <label><input type="radio" name="attend" value="불참" />불참</label>
             </p>
@@ -96,19 +96,19 @@
                 <option value="인간">인간</option>
               </select>
             </p>
-            <p>
-              알레르기가 있는 음식  <!-- p.129 -->
-              <input type="checkbox" name="allergy" value="달걀" />달걀 
-              <input type="checkbox" name="allergy" value="우유" />우유
-              <input type="checkbox" name="allergy" value="밀" />밀
-              <input type="checkbox" name="allergy" value="대두" />대두
+            <p class="allergyCheck">
+              알레르기가 있는 음식 <br/> <!-- p.129 -->
+              <label><input type="checkbox" name="allergy" value="달걀" />달걀 </label>
+              <label><input type="checkbox" name="allergy" value="우유" />우유</label>
+              <label><input type="checkbox" name="allergy" value="밀" />밀</label>
+              <label><input type="checkbox" name="allergy" value="대두" />대두</label>
             </p>
             <p>메시지<textarea name="message"></textarea></p> <!-- p.130 -->
-            <p><input type="submit" value="Send" /></p> <!-- p.130 -->
+            <p class="submitBtn"><input type="submit" value="Send" /></p> <!-- p.130 -->
           </form>
         </div>
       </section>
-      
+
     </main>
     <footer>
       <p><small>© Capyzou & Capyco</small></p>
