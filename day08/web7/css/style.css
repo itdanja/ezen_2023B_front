@@ -1,0 +1,92 @@
+body{ /* p.136 */
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color: #121212;
+}
+.ffJosefin{ /* header -> nav -> ul*/
+    font-family: 'Josefin Sans' , sans-serif;
+}
+.innerWrap{ /*p.138*/
+    width: 1240px;  margin: 0 auto;
+    padding: 80px 20px 0;
+}
+main h2{ /*p.139*/
+    text-align: center;   font-size: 60px;
+    letter-spacing: 0.05em; /* 글자 간격 */
+    margin-bottom: 80px;
+}
+header { /* p.140 */
+    /* background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover; */
+    background: url(../images/hero.jpg) no-repeat right center/cover;
+}
+/* p.142 */ 
+header .innerWrap{    height: 720px; position: relative; }
+header h1{   padding-top: 120px; }
+
+/* p.142 ~ 145 */
+header .scroll{
+    position: absolute; left: 0; bottom: 0;
+    /* header .innerWrap 기준점( position: relative )  */
+    width: 100%; text-align: center; font-size: 16px;
+}
+header .scroll img{  margin-top: 8px; }
+
+/* p.146 ~ 148  */
+header nav{
+    position: fixed; /* 위치 고정 */
+    top: 0; left: 0; width: 100%;
+    z-index: 100; /* 메뉴가 항상 앞에 나오도록 */
+}
+/* p.146~147 */
+header nav ul{ 
+    display: flex; justify-content: space-around;
+    width: 1240px; margin: 0 auto;  padding: 10px 20px;
+}
+header nav ul li a:hover{ /* 마우스를 올렸을때 */
+    text-decoration: underline; /*밑줄*/
+}
+/* p.149 */
+.msgSec{  background-color: #fbfaf7; }
+.msgSec p{ text-align: center ; line-height: 175%; margin-bottom: 40px; }
+.msgSec p.illust{   
+    margin-top: 80px; margin-bottom: 0; 
+    position: relative;
+}
+/* p.152 가상 요소 선택자 */
+.msgSec p.illust::before{
+    content: url(../images/deco_left.png);
+    position: absolute; left: 320px; bottom: -30px;
+}
+.msgSec p.illust::after{
+    content: url(../images/deco_right.png);
+    position: absolute; right: 320px; bottom: -30px;
+}
+/* p.153 */
+.dateSec{
+    background-color: #ffffff;
+    padding-bottom: 120px;
+}
+
+/*  p.illust{ }     : p 요소의 class명이 illust 이면 
+    .illust{ }      : 전체요소의 clsass명이 illust 이면  */
+
+/*
+    p.150
+    !important > style속성 > id > class > 타입 > *
+        1.  p{ text-size : 16px !important; }
+        2.  <div style="text-size:16px;">
+        3.  #id{ text-size : 16px; }
+        4.  .class{ text-size : 16px; }
+        5.  p{ text-size : 16px; }
+        6.  *{ text-size : 16px; }
+
+    p. 151~ 152 : 가상 요소 선택자 
+        - HTML에 없던 내용물[ 주로 텍스트,이미지 ]을 CSS에서 넣어주기가 가능한 속성  -
+        ::before        : 요소 앞부분 에 내용물 가상으로 넣어주기
+        ::after         : 요소 뒷부분 에 내용물 가상으로 넣어주기 
+            content     : 가상 요소의 내용물
+*/
+
