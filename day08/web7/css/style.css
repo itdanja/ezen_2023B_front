@@ -69,9 +69,56 @@ header nav ul li a:hover{ /* 마우스를 올렸을때 */
     background-color: #ffffff;
     padding-bottom: 120px;
 }
+/* p.154 */
+.dateSec .layoutWrap{    display: flex; flex-direction: row; }
+.dateSec .layoutWrap p{ flex-basis: 735px; }
+.dateSec .layoutWrap div{ width: 465px; padding-top: 100px; }
+ /* p.155 */
+.dateSec .dateDetailSec{
+    font-size: 72px; margin: 0 0 170px -100px;
+    background-color: #ffffff; padding: 40px 64px;
+    line-height: 1.2;
+}
+.word1{ font-size: 50px;}
+.word2{ font-size: 40px;}
+.word3{ font-size: 60px;}
 
-/*  p.illust{ }     : p 요소의 class명이 illust 이면 
+.accessSec{ margin-left: 48px; }
+.accessSec h3{ color: #cfafa3; font-size: 55px;
+letter-spacing: 0.05em; margin-bottom: 8px;}
+
+.accessSec p{ line-height: 160%;}
+
+
+.formSec{ /* p.157 ~ 158 */
+    background-color: #efe8d9;
+    padding-bottom: 60px;
+}
+form{ width: 600px; margin: 0 auto; }
+
+input[type="text"] , /* input중에서 type이 'text' 이면  선택 */
+input[type="email"],
+select , 
+textarea { /* css가 reset 되었기 때문에 직접 input 꾸미기 */
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    margin-top: 5p; padding: 4px 8px;
+}
+input[type="radio"],
+input[type="checkbox"]{
+    width: 16px; height: 16px; 
+    vertical-align : baseline; 
+    margin-right: 4px;
+}
+
+
+
+
+
+/*  
+    p.illust{ }     : p 요소의 class명이 illust 이면 
     .illust{ }      : 전체요소의 clsass명이 illust 이면  */
+    요소[속성명=값]
 
 /*
     p.150
@@ -83,10 +130,25 @@ header nav ul li a:hover{ /* 마우스를 올렸을때 */
         5.  p{ text-size : 16px; }
         6.  *{ text-size : 16px; }
 
+
+
     p. 151~ 152 : 가상 요소 선택자 
         - HTML에 없던 내용물[ 주로 텍스트,이미지 ]을 CSS에서 넣어주기가 가능한 속성  -
         ::before        : 요소 앞부분 에 내용물 가상으로 넣어주기
         ::after         : 요소 뒷부분 에 내용물 가상으로 넣어주기 
             content     : 가상 요소의 내용물
+
+
+
+    flex-basis: 465px;      : 유연성  
+        vs 
+    width: 465px;           : 고정 
+
+        차이점 : 1. flex-direction:colums 일때 
+                    width : 고정    flex-basis : 전체사이즈 늘어남.
+                 2. 요소보다 더 큰 컨텐츠가 들어왔을때.
+                    width : 고정    flex-basis : 같이 늘어남.
+        
+    
 */
 
