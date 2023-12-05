@@ -1,0 +1,23 @@
+*{ box-sizing: content-box;}
+a{
+    text-decoration: none; color: black;
+}
+
+#htmlCssBox{
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; ;
+}
+#htmlCssBox > div{
+    width: 30%;
+    box-shadow: 0 0 3px black;
+    margin: 5px 5px;
+    height: 250px;
+    padding: 10px;
+}
+#htmlCssBox > div > h3{
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 16px;
+}
