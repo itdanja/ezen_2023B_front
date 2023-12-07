@@ -70,7 +70,7 @@ JAVA 와 JAVAScript 다르다.
     3. confirm("출력하고싶은말")                            : 확인창(확인=true/취소=false) 버튼 출력 함수
     4. prompt("출력하고싶은말")                             : 입력상자(input , 확인=true/취소=false) 입력 함수 
     5. document.write("HTML에출력하는싶은말")               : HTML에 출력 함수 
-    6. document.특정식별자.html = "HTML에출력하는싶은말";    : 특정 요소/마크업 에 출력 함수 
+    6. document.특정식별자.innerHTML = "HTML에출력하는싶은말";    : 특정 요소/마크업 에 출력 함수 
 
 2. 기본 자료형 
     - 자료 : 프로그램이 처리할수 있는 모든 것 
