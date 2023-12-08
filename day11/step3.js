@@ -48,15 +48,59 @@ function 문제2함수(){
     document.querySelector('#result').innerHTML = `${ result }`
 } // f end  [ 2번문제 함수 끝 ]
 
+
+// console.log('안녕'); // 코드!! .js가 실행되면서 1번 실행 --> 이 코드를 여러번 실행?? --> 식별자 만들어서 식별자 호출
+/*
+function 안녕함수(){ // f start 
+    console.log('안녕'); // .js가 실행되면서 0번 실행[??? ]식별자를 호출할때 실행[매번]
+} // f end 
+*/
+
 //문제 3 : 3개의 정수[입력값1/2/3] 를 입력받아서 가장 큰수를 출력 
+function 문제3함수(){
+    // [입력]
+    let value1 = Number(document.querySelector('#input1').value);   console.log(value1);
+    let value2 = Number(document.querySelector('#input2').value);   console.log(value2);
+    let value3 = Number(document.querySelector('#input3').value);   console.log(value3);
+    // [처리]
+    let max = value1; // 첫번째 값을 가장 크다고 가정.
+    // 만약에 max의 값보다 value2의 값이 더 크면 max에 value2 값을 대입/수정
+    if( max < value2 ){ max = value2; }
+    if( max < value3 ){ max = value3; } // 위에 조건을 충족해도 현재 조건도 검사를 해야 하므로 else if 안씀.
+    // [출력]
+    document.querySelector('#result').innerHTML = `${ max }`
+} // f end  [ 3번문제 함수 끝 ]
 
 //문제 4 : 1개의 점수[입력값1] 를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력 
-       	
+function 문제4함수(){ // f start 
+    //[입력]
+    let value1 = Number(document.querySelector('#input1').value);  
+    //[처리]
+    let result = '';
+    if( value1 >= 90 ){ result = '합격'; }  // 만약에 입력받은 값이 90보다 이상이면 
+    else{ result ="불합격";  }              // 90보다 미만이면
+    //[출력]
+    document.querySelector('#result').innerHTML = `${ result }`;
+} // f end 
+
 /*문제 5 : 점수[입력값1]를 입력받아 점수 90점이상 A등급 출력 
                             80점이상 B등급 출력 
                             70점이상 C등급 출력  
                             그외 재시험
 */
+function 문제5함수(){ // f s     
+    //[입력]
+    let value1 = Number(document.querySelector('#input1').value);  
+    //[처리]
+    let result = '';
+        // 처리 로직 
+        if( value1 >= 90 ){ result = 'A등급'; }
+        else if( value1 >= 80 ){ result = 'B등급';}
+        else if( value1 >= 70 ){ result = 'C등급';}
+        else{ result = '재시험'; }
+    //[출력]
+    document.querySelector('#result').innerHTML = `${ result }`;
+} // f e 
 
 /*문제 6: 아이디[입력값1] 와 비밀번호[입력값2] 입력받기 
              		회원아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 출력 아니면 로그인실패 출력
