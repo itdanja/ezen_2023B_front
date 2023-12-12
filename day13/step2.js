@@ -45,14 +45,14 @@ function 출차(){ console.log('출차함수'); // * 함수 실행여부 확인
     const outM = outArray[1];               console.log( outM );   // 분 
     const outMtime = (outH*60) + (outM*1);  console.log( outMtime );               
                                             // (시*60) + 분   // 출차시간을 분으로 환산 한 값.
-    // =============================== 시간 차이  ===================================== //
+    // =============================== 시간 차이에 따른 요금 계산.  ===================================== //
     // 3.[출력]
     const time = outMtime - inMtime; console.log( '시간 차이 : ' + time )
     if( time < 0 ){ alert(`출차시간이 더 적을수 없습니다.`); return; }
     else if( time <= 30 ){ 요금 = 0; }
     else{   요금 = ( parseInt( (time-30)/10 ) ) * 1000;   }
     alert(`출차완료 : ${요금}`);
-    
+
 } // f end 
 
 
