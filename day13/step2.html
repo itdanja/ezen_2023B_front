@@ -1,0 +1,54 @@
+<!--
+JS 2인 과제 [ 주차장 요금 정산기 ]  파일위치 : day13 폴더내 > step2.html , step2.js , step2.css
+	요구사항
+	1. 입차 
+		1.차량번호 숫자4자리로 입력받기 type="text"
+		2.입차시간을  type="time"
+	2. 저장
+		차량번호 배열 에 저장 
+		입차시간 배열 에 저장
+	3. 출력
+		alert('입차 완료')
+
+==================================================
+	4. 출차
+		1.차량번호 숫자4자리 입력받기  type="text"
+		2.출차시간을 type="time"
+	5. 계산
+		해당 차량번호 의 입차시간과 출차시간을 계산하기 ( 하루 기준 = 하루가 넘어가지 않는다. )
+		계산식 : 최초 30분 무료 , 30분 초과 부터 10분당 1000원
+	6. 출력
+		alert( 출차완료:[요금표시] ) 또는  alert( 입차한 차량이 없습니다. )
+
+================== 추가 요구사항 ===========================
+	1. 입차/출차시 차량번호 4자리만 입력할수 있도록 하고 아니면 입차/출차 불가능.
+	2. 입차/출차 시간을 입력 안했으면 입차/출차 불가능.
+	3. 일별( 하나의 월 기준으로 매출이 있는 일 에만. ) 매출현황을 HTML에 출력 [ 배열추가 , 함수 추가 , type="datetime" ]
+	4. CSS  간단하게.
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<script src='step2.js'></script>
+</head>
+<body>
+
+	<div>
+		차량번호 : <input id="carNum" type="text" /> 		<br />
+		입차시간 : <input id="carTime" type="time" />		<br />
+		<input onclick="입차()" type="button" value="입차" />
+	</div>
+
+	<div>
+		차량번호 : <input id="carOutNum" type="text" /> 		<br />
+		출차시간 : <input id="carOutTime" type="time" />		<br />
+		<input onclick="출차()" type="button" value="출차" />
+	</div>
+
+</body>
+</html>
