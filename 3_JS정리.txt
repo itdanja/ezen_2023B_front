@@ -282,6 +282,20 @@ JAVA 와 JAVAScript 다르다.
                 default : break;
             }
 
+- 제어문(반복문)
+    1. for문*
+
+        for( 초기값 ; 조건문 ; 증감식 ){
+            실행코드
+        }
+    
+    2. 실행순서
+        1.초기값
+        2.조건문
+        [ 참이면 ] 3. 실행코드 4.증감식 2.조건문
+        [ 거짓이면] 종료                [참이면] 3.실행코드 4.증감식 2.조건문
+                                       [거짓이면] 종료
+                                       
 - 키워드
     break : switch , 반복문(for,while) { } 탈출/종료 
     return : 함수 { } 탈출/종료
@@ -335,3 +349,22 @@ JAVA 와 JAVAScript 다르다.
     - 선언된 위치{ } 에 따라 변수 사용 여부 판단.
         - 1. { } 안에서 선언된 변수/상수는 해당 { } 밖에서 사용이 불가능하다. 
         - 2. { } 안에서 선언된 변수/상수는 해당 { } 안에 하위 { } 안에는 들어갈수 있다.
+
+
+- DOM(문서Document 객체Object 모델Model) 객체
+    1. document     : HTML      -( .js는 항상 HTML 안에 존재한다. )
+        - 제공하는 함수
+        1. .querySeletor('선택자')
+            - 선택자
+            1. '#id명' , '.class명' , '마크업' 등
+            
+            - 속성
+                1. .value;                      입력 태그  : input , select , textarea 등 
+                2. .innerHTML;                  입력 태그 외 : div , table , ul , h , span 등
+    
+    - 1. HTML 전체를 호출한다.
+        const htmlObj = document;
+    - 2. HTML 중에서 input 1개 호출 
+        const inputObj = document.querySeletor('input');
+    - 3. HTML 중에서 input의 입력된 value 호출 
+        const inputValue = document.querySeletor('input').value;
