@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS과제_3(가계부)</title>
+		
+		<link href="JS과제_3(가계부).css" rel="stylesheet">
+	</head>
+	
+	<body>
+<!-- - 과제3 : 가계부 만들기 ( 과제3.HTML , 과제3.JS , 과제3.CSS )
+		요구사항
+			- 1.배열 3개 사용 ( 날짜배열 , 항목배열 , 금액배열 )
+			- 2.함수 3개 이상 정의해서 구현 
+			- 3.총합계는 계산해서 테이블 가장 하단에 출력하시오.
+			- 4.해당 삭제 버튼 클릭시 해당 항목 제거 
+			- 5. 출력시 숫자를 천단위 쉼표로 출력하시오. [ toLocaleString() 함수( 천단위쉼표가 있는 문자열로 변환)  ]
+				- let 금액 = 1200000
+				- 금액.toLocaleString( ) => '1,200,000'
+			- 6. css 적절하게 적당히 꾸며서 제출해주세요.
+		
+		ex) 입력 예시 [ input 3개 사용 ]
+			날짜 : <input type="date" />
+			항목 : <input type="text" />
+			금액 : <input type="text" />
+		
+		ex) 출력 예시 [ table 사용 ]
+			날짜			항목		금액				비고
+			2023-06-06	콜라		300			<button>삭제</button>
+			2023-06-05	노트북	1,200,000	<button>삭제</button>
+			2023-06-03	교통비	1,750		<button>삭제</button>
+				-총합계-			1,202,050 
+-->	
+	
+	<div id="wrap"> <!-- 가계부 전체 레이아웃 시작 -->
+	
+		<h2 class="header"> 가 계 부 </h2>
+	
+		<div class="date_content"> <!-- 1. 등록 : 날짜 구역 시작 -->
+			<ul>
+				<li> 날짜 : <input class="date" type="date" /> </li>
+				<li> 항목 : <input class="item" type="text" placeholder="항목"/> </li>
+				<li> 금액 : <input class="price" type="text" placeholder="금액"/> </li>
+			</ul>
+			<input type="button" onclick="추가()" value="등록"/>
+		</div> <!-- 1. 등록 : 날짜 구역 끝 -->
+		
+		<div class="list"> <!-- 가계부 테이블 구역 시작 -->
+			<table class="list_table">
+				<!-- 추가할때마다 고정인 테이블 (소제목 고정이라 반복문 x)-->
+				<tr>
+					<th>날짜</th> <th>항목</th> <th>금액</th> <th>비고</th>
+				</tr>
+				<!-- 추가될 데이터가 올 자리 (반복문 써야함) -->
+				<tr>
+					<td> </td> <td> </td> <td> </td> <td> <button> 삭제</button> </td>
+				</tr>
+			</table>
+			<div class="sum"> <!-- 테이블 밖 하단 총합계 -->
+				
+			</div> 
+		</div> <!-- 가계부 테이블 구역 끝 -->
+	
+	</div> <!-- 가계부 전체 레이아웃 끝 -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- JS 호출 : HTML body내부 최하단에 호출하기-->
+	<script src="JS과제_3(가계부).js" type="text/javascript"> </script>
+	
+	</body>
+</html>

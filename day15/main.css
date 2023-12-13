@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'omyu_pretty';
+}
+.todowrap{
+    width: 500px;
+    margin: 0 auto;
+}
+.todo_top{
+    display : flex;
+    height: 40px;
+}
+.todo_top input{
+    width: 85%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 0px 3px #d49a9a;
+}
+.todo_top button{
+     width: 15%;
+     border: none;
+     cursor: pointer;
+     font-size: 20px;
+     box-shadow: 0px 0px 3px #d49a9a;
+}
+.todo_bottom{ }
+.todo{
+    margin: 20px 1px;
+    background-color: #fcecec;
+    display: flex;
+    align-items: center;
+    padding: 2px 20px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.todo .tcontent{
+    width: 70%;
+}
+.todo .etcbtns{
+display: flex;
+    width: 30%;
+    justify-content: flex-end;
+}
+.todo .etcbtns button{
+    font-size: 11px;
+    border: none;
+    box-shadow: 0px 0px 2px red;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.successTodo .tcontent{
+    text-decoration:line-through
+}
+.successTodo{
+    background-color: #b2adad;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+
+    <div class="todowrap"> <!--전체구역 -->
+
+        <h1> 나만의 할일 목록 </h1>
+        <div class="todo_top"> <!--쓰기 구역 -->
+            <input class="tcontent" type="text"/>
+            <button onclick="doSave()" type="button"> 등록 </button>
+        </div>
+
+        <div class="todo_bottom"> <!-- 출력 구역 -->
+            <div class="todo successTodo ">
+                <div class="tcontent"> 리액트 배우기 </div>
+                <div class="etcbtns">
+                    <button onclick="doDelete()" type="button">제거하기</button>
+                </div>
+            </div>
+            <div class="todo"> <!-- todo 항목 1개 -->
+                <div class="tcontent"> 리액트 배우기 </div>
+                <div class="etcbtns">
+                    <button onclick="doDelete()" type="button">제거하기</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src='main.js'></script>
+
+
+</body>
+</html>
