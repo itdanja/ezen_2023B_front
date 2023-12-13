@@ -117,7 +117,7 @@ for( let i = 1 ; i<=line8 ; i++ ){
     output += `\n`; // 행마다 1개 이므로 반복문 안씀..
 }
 console.log( output );
-*/
+
 // 문제)8-2
 output = ``;
 const line8 = Number( prompt('문제8 줄수 : ') );
@@ -131,6 +131,52 @@ for( let i = line8 ; i<=1 ; i-- ){
     output += `\n`; // 행마다 1개 이므로 반복문 안씀..
 }
 console.log( output );
+*/
+/*
+// 문제10
+output = ``;
+const line10 = Number( prompt('문제10 줄수 : ') );
+//[행]      <tr>
+for( let r = 1 ; r<=line10 ; r++ ){
+    //[열]      <td>
+    for( let c = 1 ; c<=line10 ; c++  ){
+        // [ 조건1  = 행과 열이 같으면 별 ] 
+        if( r == c ){ output += `*`; }
+        // [ 조건2 = 행과 열이 더한 값이 입력받은값+1 ]
+        else if( r+c == line10+1 ){ output += `*`; }
+        // 아니면 공백
+        else{ output += ` `;  }
+    }
+    // 
+    output += `\n`;
+} // for end 
+console.log( output );
+*/
+
+// 문제10-2
+function 문제10(){ // f s
+    // [1.입력]
+    const line = Number( document.querySelector('#line10').value );
+    // [2.처리]
+    let html = ``; 
+        // [행]
+        for( let r = 1 ; r<=line ; r++ ){
+            html += `<tr>`; // 행 시작 
+            // [열]
+            for( let c = 1 ; c<=line; c++ ){
+                if( c == r ){ html += `<td>★</td>` }
+                else if( c+r == line+1 ){ html += `<td>★</td>` }
+                else{ html += `<td> </td>`}
+            }
+            html += `</tr>`;  // 행 끝
+        }
+    // [3.출력]
+    const tableObj = document.querySelector('#resultTable');
+    tableObj.innerHTML = html;
+} // f end 
+function 문제9(){} 
+
+
 
 /*
 // 문제1) 입력받은 수 만큼 * 출력 
@@ -171,7 +217,7 @@ console.log( output );
   *****
    ***
     *
-// 문제9) 입력받은 줄 수 만큼 * 출력  [ ex) 10 ]
+// 문제9) 입력받은 줄(짝수만) 수 만큼 * 출력  [ ex) 10 ]
     *
    ***
   *****
@@ -182,7 +228,18 @@ console.log( output );
   *****
    ***
     *
-// 문제10) 입력받은 줄 수 만큼 * 출력  [ ex) 7 ]
+ 
+9-2
+    * 
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+// 문제10) 입력받은 줄(홀수만) 수 만큼 * 출력  [ ex) 7 ]
 *     *
  *   *
   * *
