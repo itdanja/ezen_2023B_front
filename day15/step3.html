@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='step3.css'>
+    <script src='step3.js'></script>
+</head>
+<body>
+
+    <div id="wrap"> <!-- 전체구역 -->
+        <h1>나만의 할일 목록</h1>               <!-- 1.제목 구역 -->
+        <div id="todoTop">                     <!-- 2.쓰기 구역 -->
+            <input id="content" type="text"/>
+            <input type="button" value="등록"/>
+        </div>
+        <div id="todoBottom">                  <!-- 3. 출력 구역 -->
+            
+            <div class="todo success"> <!-- 하나의 할일 -->
+                <div class="content"> 자바스크립트 공부하기</div>
+                <div class="btnBox">
+                    <input type="button" value="완료" />
+                    <input type="button" value="삭제" />
+                </div>
+            </div>
+
+            <div class="todo"> <!-- 하나의 할일 -->
+                <div class="content"> 운동하기 </div>
+                <div class="btnBox">
+                    <input type="button" value="완료" />
+                    <input type="button" value="삭제" />
+                </div>
+            </div>
+
+        </div>
+    </div> 
+    
+</body>
+</html>

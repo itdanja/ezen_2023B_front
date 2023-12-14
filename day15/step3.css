@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 공통 css */
+*{ 
+    box-sizing: border-box;  font-size: 16px;
+    font-family: 'omyu_pretty';
+}
+/* 전체구역 */
+#wrap{  width: 300px; margin: 0 auto;}
+/* 쓰기 구역 */
+#todoTop{ display: flex ; height: 40px; }
+#content{ 
+    width: 250px; padding: 10px; 
+    border: none; box-shadow: 0px 0px 3px #d68585;
+}
+#todoTop > input[type="button"]{ /* 마크업 속성을 이용한 선택자.*/
+    width: 50px; padding: 10px;
+    border: none; box-shadow: 0px 0px 3px #d68585;
+}
+/* 출력 구역 */
+.todo{
+    display: flex;
+    justify-content: space-between; /* 가로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    font-size: 20px;  font-weight: bold;
+    margin: 20px 1px; padding: 5px 10px;
+    background-color: #fcecec;
+}
+.todo > .btnBox > input{
+    font-size: 12px; 
+    border: none; box-shadow: 0px 0px 3px #d68585;
+}
+.success{ background-color: #6c6c6c; }
+.success > .content{ text-decoration: line-through; color: white;}
