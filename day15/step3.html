@@ -14,28 +14,23 @@
         <h1>나만의 할일 목록</h1>               <!-- 1.제목 구역 -->
         <div id="todoTop">                     <!-- 2.쓰기 구역 -->
             <input id="content" type="text"/>
-            <input type="button" value="등록"/>
+            <input onclick="등록함수()" type="button" value="등록"/>
         </div>
         <div id="todoBottom">                  <!-- 3. 출력 구역 -->
-            
-            <div class="todo success"> <!-- 하나의 할일 -->
-                <div class="content"> 자바스크립트 공부하기</div>
-                <div class="btnBox">
-                    <input type="button" value="완료" />
-                    <input type="button" value="삭제" />
-                </div>
-            </div>
-
-            <div class="todo"> <!-- 하나의 할일 -->
-                <div class="content"> 운동하기 </div>
-                <div class="btnBox">
-                    <input type="button" value="완료" />
-                    <input type="button" value="삭제" />
-                </div>
-            </div>
-
+            <!-- JS에서 넣어줄 예정. -->
+  
         </div>
     </div> 
+
+    <!--
+            <div class="todo"> 
+                <div class="content"> 운동하기 </div>
+                <div class="btnBox">
+                    <input onclick="변경함수(2)" type="button" value="변경" />
+                    <input onclick="삭제함수(2)" type="button" value="삭제" />
+                </div>
+            </div>
+    -->
     
 </body>
 </html>
