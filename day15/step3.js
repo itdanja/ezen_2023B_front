@@ -1,13 +1,15 @@
 console.log( 'js열림');
 // 전역 자료 [ 함수밖에서 선언 ]
-const 할일목록 = [ ]; // 할일의 내용을 저장.
-const 상태목록 = [ ]; // 할일의 상태을 저장.
+const 할일목록 = [ '1교시수업듣기' , '밥먹기' , '공부하기' ]; // 할일의 내용을 저장.
+const 상태목록 = [ false           , true    ,  'false']; // 할일의 상태을 저장.
+
+출력함수();
 
 // 1. 등록 함수 선언 : 매개변수X , 리턴값X  
 function 등록함수(){ console.log('등록함수() 실행');
-    //[1.입력] : HTML INPUT으로 부터 입력된 값을 가져온다.
+    //[1.입력] : HTML INPUT으로 부터 입력된 값을 가져와서 지역변수에 저장 
     const content = document.querySelector('#content').value;   console.log( content );
-    //[2.처리] : 입력받은 값을 배열에 저장한다.
+    //[2.처리] : 입력받은 값을 배열에 저장한다. 지역변수로 가지고 있으면 함수가 끝나면 사라져서.. 전역배열에 지역변수를 옮긴다.
     할일목록.push( content ); //    
     상태목록.push( false ); //   // 할일의상태를 입력받지 않고 초기값을 임의로 false
     console.log( 할일목록 ); console.log( 상태목록 );
