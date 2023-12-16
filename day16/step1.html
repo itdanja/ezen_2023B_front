@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='step1.js'></script>
+
+    <style>
+        body > div{    display: flex;  }
+        body > div > div{
+            border: 1px solid blue; padding: 10px; width: 30%;
+        }
+        table{   width: 100%; border-collapse: collapse; }
+        table > tbody > tr:hover {  background-color: black; color: white;   }
+        #boardBox > div{
+            margin: 10px 0px; border-bottom: 1px solid #e8e8e8;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <div>
+            <h4> 글쓰기 </h4>
+            <form>
+                닉네임 : <input id="name" type="text"> <br/>
+                비밀번호 : <input id="pw" type="password"> <br/>
+                제목 : <input id="title" type="text"/>   <br/>
+                내용 : <textarea id="content" rows="5" cols="25"></textarea>  <br/>
+                <input onclick="글쓰기()" type="button"  value="등록" />
+            </form>
+        </div>
+
+        <div>
+            <h4> 글목록 </h4>
+            <table id="boardTable">
+                <thead>
+                    <tr>
+                        <th>번호</th> <th>닉네임</th> <th>제목</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h4> 글보기 </h4>
+            <div id="boardBox">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
