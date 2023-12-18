@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='step1.js'></script>
+    <style>
+        body > div { display: flex; }
+        body > div > div{ 
+            border: 1px solid blue; 
+            padding: 10px; width: 33%;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <div>
+            <h3> 글쓰기 </h3>
+            <form>
+                작성자 : <input id="writer" type="text" />      <br/>
+                비밀번호 : <input id="passowrd" type="password" /><br/>
+                제목 : <input id="title" type="text" />        <br/>
+                내용 : <textarea id="content"></textarea>        <br/>   
+                <input onclick="글쓰기()" type="button" value="등록" />
+            </form>
+        </div>
+        <div>
+            <h3> 글목록 </h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>   <th>제목</th>  <th>작성자</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3> 글보기 </h3>
+        </div>
+    </div>
+    
+</body>
+</html>
