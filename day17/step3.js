@@ -36,6 +36,10 @@ function 모든글출력(){
     return;                                                       
 }
 
+function 번호선택( index ){ return index; }
+
+
+
 function 개별글출력( index ){
 
     // * 조회수 증가.
