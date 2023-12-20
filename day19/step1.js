@@ -35,8 +35,9 @@
             사람 = { 이름 : '유재석' , 나이 : 40세 , 직업 : 강사 } - 이름으로 식별시 동명이인 존재 하면 문제점 발생. [ 중복이 절대로 없어야함.]
             사람 = { 주민등록번호 : '840420-1' 이름 : '유재석' , 나이 : 40세 , 직업 : 강사 } - 주민등록은 절대로 중복이 없다.
             
-            - 인덱스 VS *식별코드생성 VS 이름
+            - 인덱스 VS *식별코드생성 VS 이름       !!! 중복이 없어야 한다. 고정 값.
                 '신제품(NEW)' ----> { cno : 1 ,  cname : '신제품(NEW)'}
+
 
 */
 
@@ -56,6 +57,8 @@ let productArray = [
         { pno : 2 , pname : '더블비프불고기버거' , pprice : 25000 , pimg : '더블비프불고기버거.png', cno : 1  } ,
         { pno : 3 , pname : '블양양 맥시멈3' , pprice : 17000 , pimg : '블양양맥시멈3.png', cno : 5 } ,
 ]
+
+/* 3.카트목록 */
 
 // - [함수1] : 카테고리 출력하는 함수 ( 실행조건 :  js열렸을때 , 카테고리 클릭했을때. )
 printCategory( 1 ); // 함수실행. // 최초 실행시 선택카테고리 cno = 1 가정
@@ -80,7 +83,7 @@ function printCategory( selectCno ){ // 함수선언. // 매개변수 : (내가 
     // 4. 제품출력 
     printProduct( selectCno ); // 카테고리에서 선택된 카테고리번호를 제품출력에 매개변수로 전달
     // 왜?? 제품출력시 모든제품 출력이 아니고. 선택된 카테고리번호의 일치한 제품만 출력해야 되니까.
-    
+
 } // f end 
 // - [함수2] : 제품 출력하는 함수. ( 실행조건 : 카테고리출력 되었을떄 )
 function printProduct( selectCno ){ // 함수 선언 // 전체출력X // 내가 선택한 카테고리[부]의 제품[자]만.
@@ -94,7 +97,7 @@ function printProduct( selectCno ){ // 함수 선언 // 전체출력X // 내가 
             // 만약에 i번째 제품의cno와 내가선택한cno 와 같으면.
             // 천단위쉼표 함수 : 데이터.toLocaleString()
             if( productArray[i].cno == selectCno ){
-                html += `<div class="product">
+                html += `<div onclick="setCart( ${ productArray[i].pno } )" class="product">
                             <img src="img/${ productArray[i].pimg}" />
                             <div class="pinfo">
                                 <div class="pname">${ productArray[i].pname}</div>
@@ -105,4 +108,39 @@ function printProduct( selectCno ){ // 함수 선언 // 전체출력X // 내가 
         } // f end 
     // 3. 출력 
     productBox.innerHTML = html;
+} // f end 
+let cartArray = [ ] // 카트목록.
+// - [함수3] 제품 선택(클릭) 시 장바구니에 담아( 제품담아[대표자pno] )주는 함수. ( 실행조건 : 제품을 클릭했을때. )
+function setCart( selectPno ){ // - 함수선언 
+    // 제품번호를 카트 배열에 저장 
+    cartArray.push( selectPno ); 
+    // 3. 출력
+        // 1. 어디에
+        const cartBottom = document.querySelector('#cartBottom');
+        // 2. 무엇을
+        let html =''
+            let totalPrice = 0; // 카트내 제품의 총 금액
+            let cartCount = cartArray.length; // 카트내 pno 개수.
+            // 카트목록에 있는 모든 제품번호 출력 [ 배열에 있는 모든 요소를 하나씩 출력 ]
+            for( let i = 0 ; i<cartArray.length ; i++ ){ 
+                // 0번 인덱스부터 마지막인덱스까지 하나씩 증가하면서 출력
+                // - 해당 i번째 pno 제품의 정보찾기.
+                for( let j = 0 ; j<productArray.length ; j++ ){
+                    if( cartArray[i] == productArray[j].pno ){
+                        // - html div 누적 
+                        html += `<div class="citem">
+                                    <div>${ productArray[j].pname } </div>
+                                    <div>${ productArray[j].pprice.toLocaleString() }원</div>
+                                    <span>X</span>
+                                </div>`
+                        // 총합격 누적
+                        totalPrice += productArray[j].pprice; // j번째의 제품 가격을 총합계 에 더하기.
+                    } // if end 
+                } // f end 
+            } // f end 
+        // 3. HTML 출력
+        cartBottom.innerHTML = html;
+        // 3. 개수 , 총가격
+        document.querySelector('#count').innerHTML = cartCount;
+        document.querySelector('#total').innerHTML = totalPrice.toLocaleString()+"원";
 } // f end 
