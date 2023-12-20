@@ -1,0 +1,40 @@
+
+*{ margin: 0px; padding: 0px;}
+/*글머리*/
+li{ list-style: none; }
+/* 전체구역 */
+#wrap{  width: 700px; margin: 10px auto; }
+
+/* 헤더 이미지 */
+#header > img{ width: 100%;}
+/* 헤더 카테고리 */
+#header > ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+/* 선택된 카테고리 */
+#header > ul > .selectMenu{
+    border-bottom: 2px solid red;
+    padding-bottom: 5px; 
+    color: red; font-weight: bold;
+}
+/* 제품 목록 구역*/
+#productBox{
+    display: flex;
+    flex-wrap: wrap; /* 줄바꿈처리 */
+    height: 450px; /* 부모요소가 고정*/
+    /* 자식요소들이 고정 사이즈의 부모요소보다 커졌을떄. */
+    overflow-y: scroll; /* 세로 스크롤 생성 */
+}
+/* 제품 1개 구역 */
+#productBox > .product{
+    width: 200px; /* 700px 에서 가로에 배치할 개수로 나누기.*/
+    margin: 10px 10px;
+}
+/* 제품 이미지 */
+#productBox > .product > img{ width: 100%;}
+/* 제품 이름/가격 */
+#productBox > .product > .pinfo{  text-align: center; }
+#productBox > .product .pname{ font-weight: bold; }
+#productBox > .product .pprice{ color: red; }
