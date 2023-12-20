@@ -53,6 +53,56 @@ let categoryArray =  [
 /* 2.제품목록 *( 제품이미지명은 사진파일명이랑 동일하게. ) */
 let productArray = [
         { pno : 1 , pname : '큐브 스테이크 와퍼' , pprice : 19000 , pimg : '큐브스테이크와퍼.png' , cno : 1  } ,
-        { pno : 2 , pname : '더블비프불고기버거' , pprice : 25000 , pimg : '더블비프불고기버거.png', cno : 4  } ,
-        { pno : 3 , pname : '블양양 맥시멈3' , pprice : 170000 , pimg : '블양양맥시멈3.png', cno : 5 } ,
+        { pno : 2 , pname : '더블비프불고기버거' , pprice : 25000 , pimg : '더블비프불고기버거.png', cno : 1  } ,
+        { pno : 3 , pname : '블양양 맥시멈3' , pprice : 17000 , pimg : '블양양맥시멈3.png', cno : 5 } ,
 ]
+
+// - [함수1] : 카테고리 출력하는 함수 ( 실행조건 :  js열렸을때 , 카테고리 클릭했을때. )
+printCategory( 1 ); // 함수실행. // 최초 실행시 선택카테고리 cno = 1 가정
+function printCategory( selectCno ){ // 함수선언. // 매개변수 : (내가 선택한 카테고리번호)함수안으로 들어온 변수.
+    console.log('printCategory()함수')
+    // 1. 어디에
+    const categoryUl = document.querySelector('#header>ul');
+    // 2. 무엇을
+    let html = '';
+        // 2-1 카테고리배열에 존재하는 카테고리객체들을 모두 li형식으로 변환해서
+        for( let i = 0 ; i<categoryArray.length ; i++ ){
+            // 만약에 i번째 카테고리의 cno와 내가선택한cno[매개변수] 와 같으면 
+            // 만약에 클릭했을때. 클릭한 li의 카테고리번호를 매개변수[클릭한 cno]로 전달
+            html +=`<li onclick="printCategory(${ categoryArray[i].cno })" 
+                        class="${ categoryArray[i].cno == selectCno ? 'selectMenu' : '' }" > 
+                        ${ categoryArray[i].cname } 
+                    </li>` 
+        }// f end
+
+    // 3. 카테고리출력 
+    categoryUl.innerHTML = html;
+    // 4. 제품출력 
+    printProduct( selectCno ); // 카테고리에서 선택된 카테고리번호를 제품출력에 매개변수로 전달
+    // 왜?? 제품출력시 모든제품 출력이 아니고. 선택된 카테고리번호의 일치한 제품만 출력해야 되니까.
+    
+} // f end 
+// - [함수2] : 제품 출력하는 함수. ( 실행조건 : 카테고리출력 되었을떄 )
+function printProduct( selectCno ){ // 함수 선언 // 전체출력X // 내가 선택한 카테고리[부]의 제품[자]만.
+    console.log( selectCno );
+    // 1. 어디에
+    const productBox = document.querySelector('#productBox');
+    // 2. 무엇을
+    let html ='';
+        // 자식요소에서 내가 선택한 카테고리번호 와 일치한 제품을 찾아서 div화 
+        for( let i = 0 ; i<productArray.length ; i++ ){
+            // 만약에 i번째 제품의cno와 내가선택한cno 와 같으면.
+            // 천단위쉼표 함수 : 데이터.toLocaleString()
+            if( productArray[i].cno == selectCno ){
+                html += `<div class="product">
+                            <img src="img/${ productArray[i].pimg}" />
+                            <div class="pinfo">
+                                <div class="pname">${ productArray[i].pname}</div>
+                                <div class="pprice">${ productArray[i].pprice.toLocaleString() }원</div>
+                            </div>
+                        </div>`
+            } // if end 
+        } // f end 
+    // 3. 출력 
+    productBox.innerHTML = html;
+} // f end 
