@@ -38,3 +38,55 @@ li{ list-style: none; }
 #productBox > .product > .pinfo{  text-align: center; }
 #productBox > .product .pname{ font-weight: bold; }
 #productBox > .product .pprice{ color: red; }
+
+
+/* 카트 버튼들 */
+#cartBtns{ display: flex; }
+#cartBtns > input{
+    width: 100%; height: 70px;
+    font-size: 20px; border: none;
+    color: white; font-weight: bold;
+}
+/* 자식요소 여러개일떄[형제가 여러개일때] 자식의 순번[인덱스 1번 부터]으로 */
+/* 자식요소선택자:nth-child( 인덱스 ) */
+#cartBtns > input:nth-child(1){ background-color: black; }
+#cartBtns > input:nth-child(2){ background-color: red; }
+
+/* 카트 정보의 상단부분 */
+#cartContent{   background-color: #e8e8e8;} 
+#cartTop{
+    display: flex; justify-content: space-between;
+    padding: 10px 50px;
+}
+#cartBottom{
+    display: flex; overflow-x: scroll; /* 가로축 스크롤 */
+    flex-wrap: nowrap; 
+    /* 자식요소들의 사이즈으로 자동으로 변환해서 한줄에 표기*/
+}
+/* 카트에 담긴 제품1개 */
+#cartBottom > .citem{
+    /* width: 150px; */ 
+    /*부모요소가 flex 이면서 nowrap 이면 사이즈가 자동 변환 */
+    min-width: 150px; /* 고정 최소 가로사이즈 */
+    background-color: white;
+    margin: 10px; padding: 10px;
+    position: relative;
+}
+/* 카트에 X 취소 표시 */
+#cartBottom > .citem > span {
+    position: absolute; 
+    top : 10px; right: 10px;
+}
+#cartBottom > .citem > div:nth-child(1) { width: 130px; height: 70px; }
+#cartBottom > .citem > div:nth-child(2) { color: red; }
+/* 카트 개수 표시 */
+#cartTop > div:nth-child(1) span{ 
+    background-color: red; 
+    border-radius: 30px;
+    display: inline-block;
+    padding: 3px; width: 30px; 
+    text-align: center; color: white;
+}
+/* 카트 금액 */
+#cartTop > div:nth-child(2) span{ color: red; font-weight: bold;  }
+
