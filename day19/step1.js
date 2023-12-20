@@ -57,6 +57,7 @@ let productArray = [
         { pno : 2 , pname : '더블비프불고기버거' , pprice : 25000 , pimg : '더블비프불고기버거.png', cno : 1  } ,
         { pno : 3 , pname : '블양양 맥시멈3' , pprice : 17000 , pimg : '블양양맥시멈3.png', cno : 5 } ,
 ]
+let cartArray = [   ] // 카트목록 ( 인덱스:js에서만 사용할예정 vs 식별번호 )
 
 /* 3.카트목록 */
 
@@ -109,38 +110,53 @@ function printProduct( selectCno ){ // 함수 선언 // 전체출력X // 내가 
     // 3. 출력 
     productBox.innerHTML = html;
 } // f end 
-let cartArray = [ ] // 카트목록.
+
 // - [함수3] 제품 선택(클릭) 시 장바구니에 담아( 제품담아[대표자pno] )주는 함수. ( 실행조건 : 제품을 클릭했을때. )
 function setCart( selectPno ){ // - 함수선언 
     // 제품번호를 카트 배열에 저장 
     cartArray.push( selectPno ); 
     // 3. 출력
-        // 1. 어디에
-        const cartBottom = document.querySelector('#cartBottom');
-        // 2. 무엇을
-        let html =''
-            let totalPrice = 0; // 카트내 제품의 총 금액
-            let cartCount = cartArray.length; // 카트내 pno 개수.
-            // 카트목록에 있는 모든 제품번호 출력 [ 배열에 있는 모든 요소를 하나씩 출력 ]
-            for( let i = 0 ; i<cartArray.length ; i++ ){ 
-                // 0번 인덱스부터 마지막인덱스까지 하나씩 증가하면서 출력
-                // - 해당 i번째 pno 제품의 정보찾기.
-                for( let j = 0 ; j<productArray.length ; j++ ){
-                    if( cartArray[i] == productArray[j].pno ){
-                        // - html div 누적 
-                        html += `<div class="citem">
-                                    <div>${ productArray[j].pname } </div>
-                                    <div>${ productArray[j].pprice.toLocaleString() }원</div>
-                                    <span>X</span>
-                                </div>`
-                        // 총합격 누적
-                        totalPrice += productArray[j].pprice; // j번째의 제품 가격을 총합계 에 더하기.
-                    } // if end 
-                } // f end 
+    printCart( );
+} // f end 
+
+// - [함수4] 카트에서 x버튼을 클릭시 카트에서 삭제 ( 실행조건 : x버튼을 클릭했을때. )
+function cartDelete( deleteIndex ){
+    //1.입력 --> 매개변수로 선택된 삭제인덱스.
+    //2.처리 --> 배열에서 해당 인덱스 삭제 
+    cartArray.splice(  deleteIndex , 1 );
+        // cartArray.splice( 0 ); : 0인덱스부터 삭제개수 생략하면 0인덱스부터 전체삭제
+    //3.출력 --> 카트상태 새로고침.. 
+    printCart( );
+} // f end 
+
+// - [함수5] 카트의 현재 상태를 출력하는 함수 ( 실행조건 : 1.제품을 선택했을때 2.제품을 삭제했을때. )
+function printCart( ){
+    // 1. 어디에
+    const cartBottom = document.querySelector('#cartBottom');
+    // 2. 무엇을
+    let html =''
+        let totalPrice = 0; // 카트내 제품의 총 금액
+        let cartCount = cartArray.length; // 카트내 pno 개수.
+        // 카트목록에 있는 모든 제품번호 출력 [ 배열에 있는 모든 요소를 하나씩 출력 ]
+        for( let i = 0 ; i<cartArray.length ; i++ ){ 
+            // 0번 인덱스부터 마지막인덱스까지 하나씩 증가하면서 출력
+            // - 해당 i번째 pno 제품의 정보찾기.
+            for( let j = 0 ; j<productArray.length ; j++ ){
+                if( cartArray[i] == productArray[j].pno ){
+                    // - html div 누적 
+                    html += `<div class="citem">
+                                <div>${ productArray[j].pname } </div>
+                                <div>${ productArray[j].pprice.toLocaleString() }원</div>
+                                <span onclick="cartDelete( ${ i } )">X</span>
+                            </div>`
+                    // 총합격 누적
+                    totalPrice += productArray[j].pprice; // j번째의 제품 가격을 총합계 에 더하기.
+                } // if end 
             } // f end 
-        // 3. HTML 출력
-        cartBottom.innerHTML = html;
-        // 3. 개수 , 총가격
-        document.querySelector('#count').innerHTML = cartCount;
-        document.querySelector('#total').innerHTML = totalPrice.toLocaleString()+"원";
+        } // f end 
+    // 3. HTML 출력
+    cartBottom.innerHTML = html;
+    // 3. 개수 , 총가격
+    document.querySelector('#count').innerHTML = cartCount;
+    document.querySelector('#total').innerHTML = totalPrice.toLocaleString()+"원";
 } // f end 
