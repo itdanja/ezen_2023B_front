@@ -1,4 +1,3 @@
-
 //267p.
 // 1. .toFixed(소수점)  : 해당 소수점까지 출력[반올림] 
 const l = 123.456789;
@@ -11,7 +10,7 @@ console.log( m );                   // m : NaN
 console.log( m === NaN )            // false // NaN 비교x
 console.log( Number.isNaN(m) );     // true  // isNaN() 함수 이용한 비교o
 
-// 3. isFinite( 연산 )  : 유효성검사
+// 3. .isFinite( 연산 )  : 유효성검사
 const n = 10/0;
 console.log( n );
 const o = -10 /0 ;
@@ -32,16 +31,17 @@ const time = timeArray[0];
 const hour = time.split(":");
     console.log( hour[0] );
 
-// 3. JSON : 다른 애플케이션[ JS 아닌 프로그램 ]과 통신할때 데이터 교환 목적 활용
+// 3. JSON : 다른 애플케이션[ JS 아닌 프로그램 ]과 통신할때 데이터 교환( !바이트단위=문자 ) 목적 활용
     // 1. JS객체 --> JSON문자열 : JSON.stringify( )
     // 2. JSON문자열 --> JS객체 : JSON.parse( )
-
+    // - 함수X
+    
 // 356p. 좀 더 알아보기2
 // - [ JS가 꺼지고/사라져도 사라지지 않는 메모리 ] 개방
-    // - localStorage   : 브라우저[크롬,엣지]에 저장 , 브라우저 자체가 꺼지면 사라짐, 다른 탭에서 공유
+    // - localStorage   : 브라우저[크롬,엣지]에 저장 , 브라우저 자체가 꺼지면 사라짐( 쿠키 ) , 다른 탭에서 공유
     // - sessionstorage : 브라우저[크롬,엣지]에 저장 , 탭 꺼지면 메모리도 사라짐.   , 같은 탭에서 공유
 
-// 예1)
+// 예1) localStorage 객체 : 브라우저 localStorage 접근할수 있는 객체
 // localStorage.setItem( 키 , 값 );
 localStorage.setItem( '이름' , '유재석' ); // '이름' 이라는 키로 '유재석' 값을 저장.
 console.log( localStorage.getItem('이름') );    // '이름' 이라는 키를 넣어서 '유재석' 값을 호출
