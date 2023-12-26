@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <!-- p.308 : body 생성 되기전에 head가 먼저 실행 되므로. body 호출하면 문제발생!! -->
+    <script>
+        document.body.innerHTML += `안녕`
+    </script>
+
+    <!-- [1] p.309 : (HTML이 먼저 렌더링 하고 JS 실행)브라우저가 문서 객체를 모두 읽고 나서 실행하는 이벤트 -->
+    <script>
+        document.addEventListener( 'DOMContentLoaded' , function(){
+            console.log( document ); // HTML(텍스트)을 객체화
+                // 왜 ??? 객체화 한 이유 : 다양한 속성/메소드 사용할려고. [ HTML텍스트언어고 JS는 객체 언어]
+            console.log( document.body );   // 마크업(요소)를 객체로 호출.
+            console.log( document.body.innerHTML  ); // 마크업(요소) 사이에 있는 HTML를 문자로 호출
+
+            document.body.innerHTML += `안녕3`;
+        } )
+            // .addEventListener : 문서(document) 이벤트를 읽어드린다.
+                // .addEventListener( 'DOMContentLoaded' , 함수 ) : 문서의 내용을 모두 읽었을때. 함수 실행
+                    // function(){} : 익명함수 : 이름이 없는 함수.
+        document.onload = function(){
+            alert('dd');
+            document.innerHTML += `안녕4`;
+        }
+        document.addEventListener('load' , function(){
+            document.innerHTML += `안녕5`;
+        })
+        window.onload = function(){   
+             document.innerHTML += `안녕6`;  
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- [2] body에 JS추가하자. -->
+    <script>
+        document.body.innerHTML += `안녕2`
+    </script>
+</body>
+</html>

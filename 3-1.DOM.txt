@@ -1,0 +1,29 @@
+
+DOM : 문서 객체 모델
+    - Document Object Model : JS가 HTML 문서의 요소를 제어 하기 위해
+    - JS가 document객체 지원.
+        document : <HTML> 객체.
+        document.body : <body> 객체.
+        document 다양한 메소드 지원
+            0. .addEventListener('이벤트명' , 함수() ) : 해당 이벤트가 발생하면 함수() 실행 
+                - 이벤트명 종류 
+                    'DOMContentLoaded'  : HTML를 모두 읽었을때 실행되는 이벤트함수.
+
+            1. .querySeletor(선택자)         : 선택자를 이용한 해당 요소의 DOM객체 1개 호출 
+            2. .querySeletorAll(선택자)     : 선택자를 이용한 해당 요소의 DOM객체를 여러개 호출 / 배열반환
+            3. .innerHTML                   : 문자열을 html형식 
+            4. .textContent                 : 문자열을 그대로 
+            5. .value                       : 입력받은 value 속성 값 호출 
+            6. .style                       : style 속성 호출 
+                .style.css속성명='값'        : !!속성명은 카멜표기법.
+                    1. .style.height
+                    2. .style.backgroundColor
+                    3. .style.color 
+                    4. .style.padding 
+            8. .src
+            9. .createElement('마크업/요소명');     : DOM요소 객체 생성 
+            10. .appendChild( 생성된DOM객체 );      : 해당 위치에 DOM요소 객체 지정.
+            
+            - .setAttribute( '속성명' , '값')
+
+            
