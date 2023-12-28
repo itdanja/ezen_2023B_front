@@ -1,0 +1,14 @@
+day24
+    - index.html    : 첫페이지 
+    - header.html   : 헤더페이지[공통]
+    - write.html    : 쓰기페이지
+
+    - css 폴더
+        - common.css : 공통 css
+        - index.css : index.html 
+    - js 폴더
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        - common.js : 공통 js
+        - index.js 
+    - img 폴더
+        - 
