@@ -114,6 +114,7 @@ function 모든피드호출(){
     // 3. [출력]
     feedBox.innerHTML = html;
 } // f end 
+
 // [2] 피드/게시물의 해당하는 댓글 모두출력하는 함수 정의 ( 1. 피드/게시물 출력시 같이 )
 function 댓글출력( fno ){ // 매개변수 : 출력할 게시물번호.
     let html = ``;
@@ -132,6 +133,4 @@ function 댓글출력( fno ){ // 매개변수 : 출력할 게시물번호.
     } // for end 
     return html; // 
 } 
-
-
-
+    
