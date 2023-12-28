@@ -18,7 +18,7 @@ a{ color: black; text-decoration: none; } /* a태그 기본값 제거 */
     margin: 0 auto; 
 }
 #main{
-
+    padding : 80px 0px ;
 }
 #header{
     display: flex;
@@ -26,6 +26,9 @@ a{ color: black; text-decoration: none; } /* a태그 기본값 제거 */
     align-items: center;
     padding: 20px 0px;
     border-bottom: 2px solid #e8e8e8;
+    position: fixed; /* 위치 고정 */
+    top : 0px; /* 상단에 붙이기.*/
+    width: 350px; background-color: white;
 }
 #header img{
     width: 70px;
