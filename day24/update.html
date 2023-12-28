@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/write.css'>
+    
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src='js/common.js'></script>
+    <script src='js/update.js'></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="main">
+            <br/>
+            <textarea placeholder="게시물내용입력"></textarea>  <br/>
+            <input onchange="이미지등록(event)" type="file" accept="image/*" />  <br/>
+            <img id="fileImg" /> <br/>
+            <button onclick="피드수정()" type="button">피드수정</button>
+        </div>
+    </div>
+</body>
+</html>

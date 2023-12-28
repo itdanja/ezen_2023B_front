@@ -102,7 +102,7 @@ function 모든피드호출(){
                         </div>
                         <div class="btnBox">
                             <div> <!-- 왼쪽 버튼들-->
-                                <button type="button">수정</button>
+                                <button onclick="수정페이지이동(${ feed.fno })" type="button">수정</button>
                                 <button onclick="피드삭제(${ feed.fno })" type="button">삭제</button>
                                 <button type="button">답글</button>
                             </div>
@@ -140,15 +140,13 @@ function 댓글출력( fno ){ // 매개변수 : 출력할 게시물번호.
 
 // [3] 삭제함수. ( 1.삭제버튼을 클릭했을때. )
 function 피드삭제( fno ) { // 매개변수 : 삭제할 fno 
-    console.log( fno );
-    // 1. 확인패스워드 입력
-    const pwdConfirm = prompt('피드의 비밀번호 확인');
-    // 2. 패스워드 일치 여부 확인 
-        // 1. 피드목록에서 fno에 객체/피드 찾기.
+
+    if( 패스워드확인(fno) ){ return; }
+
     const feedList = JSON.parse( localStorage.getItem('feedList') );
     for( let i = 0 ; i<feedList.length ; i++ ){
-        // 2. 찾은 객체의 fpwd 와 입력받은 패스워드 일치여부
-        if( feedList[i].fno == fno && feedList[i].fpwd == pwdConfirm ){
+        // 2. 객체를 찾아서 삭제처리
+        if( feedList[i].fno == fno ){
             feedList.splice( i , 1 ); // 해당 게시물 삭제.
             alert('삭제 되었습니다.');  //!!!!!!!! : 수정된 feedList 를 localStorage에도 적용.
             localStorage.setItem('feedList' , JSON.stringify(feedList) );
@@ -156,15 +154,36 @@ function 피드삭제( fno ) { // 매개변수 : 삭제할 fno
             return; // 함수종료 [ 원하는 코드 실행 했으므로 종료. ]
         }
     } // for end 
-    // 3. for 안에서 동일한 객체를 못찾았으면.
-    alert('비밀번호가 일치하지 않습니다.');
 } //  f end 
 
 // [4] 수정페이지로 이동함수. ( 1.수정버튼을 클릭했을때.)
 function 수정페이지이동( fno ){ // 매개변수 : 수정할 pno
-     // 페이지가 바뀌면 변수가 사라지니까. localStorage에 수정할 게시물번호를 보관하기.
+
+    if( 패스워드확인(fno) ){ return; }
+
+    // 페이지가 바뀌면 변수가 사라지니까. localStorage에 수정할 게시물번호를 보관하기.
     localStorage.setItem( 'updatefno' , JSON.stringify( fno ) ); 
     location.href="update.html";
-}
+} // f end 
+
+// [5] 패스워드 검사 함수 ( 1.삭제/수정 했을때 )
+function 패스워드확인( fno ){
+    // 1. 확인패스워드 입력
+    const pwdConfirm = prompt('피드의 비밀번호 확인');
+    // 2. 패스워드 일치 여부 확인 
+        // 1. 피드목록에서 fno에 객체/피드 찾기.
+    const feedList = JSON.parse( localStorage.getItem('feedList') );
+    for( let i = 0 ; i<feedList.length ; i++ ){
+        // 2. 찾은 객체의 fpwd 와 입력받은 패스워드 일치여부
+        if( feedList[i].fno == fno 
+                && feedList[i].fpwd == pwdConfirm ){
+            return false; // 패스워드 일치하면 false
+        }
+    };
+    alert('비밀번호가 일치하지 않습니다.');
+    return true; // 패스워드가 일치하지 않으면 true
+} // f end 
+
+
 
     
