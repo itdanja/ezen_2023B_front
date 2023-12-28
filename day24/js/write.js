@@ -28,7 +28,6 @@ function 피드등록(){   console.log('피드등록()');
     // 6. 등록 성공시
     alert('피드게시 성공'); location.href='index.html'; // 페이지 이동
 } // f end 
-
 // [2] 이미지 등록함수 ( 1.input(file)에서 첨부파일을 등록(onchange)할때마다. )
 let imgByte = '';
 function 이미지등록( event ){  console.log('이미지등록()');
