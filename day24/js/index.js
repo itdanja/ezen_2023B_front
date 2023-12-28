@@ -80,6 +80,10 @@ document.addEventListener('DOMContentLoaded' , function(){
 
 // [1] 모든 피드(게시물) 출력함수 정의 ( 1.js열렸을때 2.등록,삭제,댓글등록/삭제 )
 function 모든피드호출(){
+
+    // !!!!!! : 샘플 대신에 localStorage 에 있는 데이터 사용.
+    let feedList = JSON.parse( localStorage.getItem('feedList') ) ;
+
     // 1. [어디에]
     const feedBox = document.querySelector('#feedBox');
     // 2. [무엇을]
@@ -91,7 +95,7 @@ function 모든피드호출(){
             const feed = feedList[i];
             // 2-3 각 객체 정보를 HTML에 대입
             html += `<div class="feed"> 
-                        <div> <img src="img/${ feed.fimg }" /> </div>
+                        <div> <img src="${ feed.fimg }" /> </div>
                         <div class="contentBox"> 
                             <div class="date"> ${ feed.fdate } </div>
                             <div class="content"> ${ feed.fcontent }  </div>
